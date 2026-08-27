@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video & İçerik | Dijital Köprü</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #111827;
+            line-height: 1.6;
+        }
+
+        /* MENÜ */
+
+        header {
+            background: #111827;
+
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #60a5fa;
+        }
+
+        .back {
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .back:hover {
+            color: #60a5fa;
+        }
+
+        /* BAŞLIK */
+
+        .hero {
+            background:
+                radial-gradient(circle at top right, #2563eb55, transparent 35%),
+                #0f172a;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 100px 20px;
+        }
+
+        .hero-icon {
+            font-size: 70px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #cbd5e1;
+
+            font-size: 18px;
+        }
+
+        /* GENEL */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        /* HİZMETLER */
+
+        .services {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            width: 300px;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            text-decoration: none;
+
+            color: #111827;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            font-size: 45px;
+
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #6b7280;
+        }
+
+        /* DETAY */
+
+        .detail {
+            background: #111827;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .detail-content {
+            max-width: 750px;
+
+            margin: auto;
+        }
+
+        .detail h2 {
+            font-size: 38px;
+
+            margin-bottom: 20px;
+        }
+
+        .detail p {
+            color: #cbd5e1;
+
+            font-size: 18px;
+        }
+
+        /* BUTON */
+
+        .button {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 15px 28px;
+
+            background: #2563eb;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #020617;
+
+            color: #94a3b8;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        /* TELEFON */
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 65px 20px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- MENÜ -->
+
+<header>
+
+    <div class="logo">
+        Dijital <span>Köprü</span>
+    </div>
+
+    <a href="./index.html" class="back">
+        ← Ana Sayfaya Dön
+    </a>
+
+</header>
+
+
+<!-- BAŞLIK -->
+
+<section class="hero">
+
+    <div class="hero-icon">
+        🎬
+    </div>
+
+    <h1>
+        Video & İçerik
+    </h1>
+
+    <p>
+        Markanızın dikkat çekmesi için kısa videolar,
+        Reels ve dijital içerikler hazırlıyoruz.
+    </p>
+
+</section>
+
+
+<!-- HİZMETLER -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>
+            Neler Yapıyoruz?
+        </h2>
+
+        <p>
+            Markanız için hazırladığımız video ve içerik çözümleri.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+
+        <a href="#reels" class="service-card">
+
+            <div class="service-icon">
+                🎬
+            </div>
+
+            <h3>
+                Reels Videoları
+            </h3>
+
+            <p>
+                Instagram Reels için kısa, dikkat çekici
+                ve modern videolar hazırlıyoruz.
+            </p>
+
+        </a>
+
+
+        <a href="#tanitim" class="service-card">
+
+            <div class="service-icon">
+                📹
+            </div>
+
+            <h3>
+                Tanıtım Videoları
+            </h3>
+
+            <p>
+                İşletmenizi, ürünlerinizi ve hizmetlerinizi
+                tanıtan profesyonel videolar oluşturuyoruz.
+            </p>
+
+        </a>
+
+
+        <a href="#urun" class="service-card">
+
+            <div class="service-icon">
+                📦
+            </div>
+
+            <h3>
+                Ürün Videoları
+            </h3>
+
+            <p>
+                Ürünlerinizi sosyal medyada daha dikkat
+                çekici gösterecek videolar hazırlıyoruz.
+            </p>
+
+        </a>
+
+
+        <a href="#montaj" class="service-card">
+
+            <div class="service-icon">
+                ✂️
+            </div>
+
+            <h3>
+                Video Montaj
+            </h3>
+
+            <p>
+                Çektiğiniz videoları düzenleyip daha
+                profesyonel hale getiriyoruz.
+            </p>
+
+        </a>
+
+
+        <a href="#hikaye" class="service-card">
+
+            <div class="service-icon">
+                📱
+            </div>
+
+            <h3>
+                Hikâye İçerikleri
+            </h3>
+
+            <p>
+                Instagram hikâyeleri için dikkat çekici
+                görsel ve video içerikleri hazırlıyoruz.
+            </p>
+
+        </a>
+
+
+        <a href="#kampanya" class="service-card">
+
+            <div class="service-icon">
+                🚀
+            </div>
+
+            <h3>
+                Kampanya İçerikleri
+            </h3>
+
+            <p>
+                Kampanya ve özel günler için sosyal medyada
+                kullanılabilecek içerikler oluşturuyoruz.
+            </p>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- DETAYLAR -->
+
+<section class="detail" id="reels">
+
+    <div class="detail-content">
+
+        <h2>
+            Reels Videoları
+        </h2>
+
+        <p>
+            Markanızın Instagram'da daha dikkat çekici
+            görünmesi için kısa ve akıcı Reels videoları
+            hazırlıyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="tanitim">
+
+    <div class="section-title">
+
+        <h2>
+            Tanıtım Videoları
+        </h2>
+
+        <p>
+            İşletmenizi ve hizmetlerinizi müşterilerinize
+            etkili şekilde tanıtacak videolar hazırlıyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="detail" id="urun">
+
+    <div class="detail-content">
+
+        <h2>
+            Ürün Videoları
+        </h2>
+
+        <p>
+            Ürünlerinizin özelliklerini ve kullanımını
+            gösteren kaliteli içerikler hazırlıyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="montaj">
+
+    <div class="section-title">
+
+        <h2>
+            Video Montaj
+        </h2>
+
+        <p>
+            Videolarınızı kesiyor, düzenliyor ve sosyal
+            medyada paylaşılmaya hazır hale getiriyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="detail" id="hikaye">
+
+    <div class="detail-content">
+
+        <h2>
+            Hikâye İçerikleri
+        </h2>
+
+        <p>
+            Günlük paylaşım ve kampanyalarınız için
+            Instagram hikâye içerikleri hazırlıyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="kampanya">
+
+    <div class="section-title">
+
+        <h2>
+            Kampanya İçerikleri
+        </h2>
+
+        <p>
+            İndirim, kampanya ve özel günlerde kullanabileceğiniz
+            dikkat çekici içerikler oluşturuyoruz.
+        </p>
+
+        <a href="./index.html#iletisim" class="button">
+            📩 Teklif Al
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Dijital Köprü — Tüm hakları saklıdır.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

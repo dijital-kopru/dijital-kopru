@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prestij Oto Yıkama | Demo</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fa;
+            color: #111827;
+            line-height: 1.6;
+        }
+
+        .demo {
+            text-align: center;
+
+            padding: 12px;
+
+            background: #0f172a;
+
+            color: white;
+
+            font-size: 14px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: #111827;
+
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+
+            font-size: 24px;
+
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav {
+            display: flex;
+
+            gap: 25px;
+        }
+
+        nav a {
+            color: #e5e7eb;
+
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 620px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 80px 20px;
+
+            background:
+                linear-gradient(#020617aa, #020617aa),
+                #164e63;
+
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .icon {
+            font-size: 75px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+
+            font-size: 19px;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 15px 30px;
+
+            background: #0284c7;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #0369a1;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .title {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .title h2 {
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #64748b;
+        }
+
+        .services {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+        .service {
+            width: 280px;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 16px;
+
+            box-shadow: 0 8px 25px #00000010;
+
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-icon {
+            font-size: 50px;
+
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #64748b;
+        }
+
+        .price {
+            display: block;
+
+            margin-top: 15px;
+
+            color: #0284c7;
+
+            font-size: 18px;
+
+            font-weight: bold;
+        }
+
+        .about {
+            background: #0f172a;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 750px;
+
+            margin: auto;
+        }
+
+        .about p {
+            color: #cbd5e1;
+        }
+
+        .contact {
+            background: white;
+
+            text-align: center;
+        }
+
+        .contact p {
+            color: #64748b;
+
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #020617;
+
+            color: #94a3b8;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav {
+                gap: 12px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="demo">
+    DEMO WEB SİTESİ — Dijital Köprü
+</div>
+
+
+<header>
+
+    <div class="logo">
+        🚗 Prestij <span>Oto Yıkama</span>
+    </div>
+
+    <nav>
+
+        <a href="#anasayfa">Ana Sayfa</a>
+
+        <a href="#hizmetler">Hizmetler</a>
+
+        <a href="#hakkimizda">Hakkımızda</a>
+
+        <a href="#iletisim">İletişim</a>
+
+    </nav>
+
+</header>
+
+
+<section class="hero" id="anasayfa">
+
+    <div class="hero-content">
+
+        <div class="icon">
+            🚗
+        </div>
+
+        <h1>
+            Aracınız İçin <span>Prestijli Bakım</span>
+        </h1>
+
+        <p>
+            Aracınızı ilk günkü görünümüne yaklaştırmak için
+            profesyonel oto yıkama ve bakım hizmetleri.
+        </p>
+
+        <a href="#hizmetler" class="button">
+            Hizmetleri Gör
+        </a>
+
+    </div>
+
+</section>
+
+
+<section id="hizmetler">
+
+    <div class="title">
+
+        <h2>Hizmetlerimiz</h2>
+
+        <p>
+            Aracınız için sunduğumuz bakım seçenekleri.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                🚿
+            </div>
+
+            <h3>İç & Dış Yıkama</h3>
+
+            <p>
+                Aracınızın iç ve dış temizliğini
+                profesyonel şekilde yapıyoruz.
+            </p>
+
+            <span class="price">
+                350 TL
+            </span>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                ✨
+            </div>
+
+            <h3>Detaylı Temizlik</h3>
+
+            <p>
+                Araç içindeki detayların kapsamlı
+                temizliği ve bakımı.
+            </p>
+
+            <span class="price">
+                750 TL
+            </span>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                💎
+            </div>
+
+            <h3>Premium Bakım</h3>
+
+            <p>
+                Aracınız için kapsamlı temizlik
+                ve özel bakım hizmeti.
+            </p>
+
+            <span class="price">
+                1.200 TL
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="about" id="hakkimizda">
+
+    <div class="about-content">
+
+        <div class="title">
+
+            <h2>Hakkımızda</h2>
+
+        </div>
+
+        <p>
+            Prestij Oto Yıkama olarak araç sahiplerine
+            kaliteli, hızlı ve profesyonel temizlik
+            hizmetleri sunmayı amaçlıyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="contact" id="iletisim">
+
+    <div class="title">
+
+        <h2>Randevu Al</h2>
+
+        <p>
+            Aracınız için uygun bir randevu oluşturmak
+            için bizimle iletişime geçebilirsiniz.
+        </p>
+
+    </div>
+
+    <p>
+        📞 0555 555 55 55
+    </p>
+
+    <p>
+        📍 Mardin / Kızıltepe
+    </p>
+
+    <a href="tel:05555555555" class="button">
+        📞 Bizi Ara
+    </a>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Prestij Oto Yıkama — Demo Web Sitesi
+    </p>
+
+    <p>
+        Dijital Köprü tarafından hazırlanmıştır.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

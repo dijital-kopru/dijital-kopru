@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Tasarım | Dijital Köprü</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #111827;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111827;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #60a5fa;
+        }
+
+        .back {
+            color: #e5e7eb;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            background:
+                radial-gradient(circle at top right, #2563eb55, transparent 35%),
+                #0f172a;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-icon {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            width: 300px;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            text-decoration: none;
+            color: #111827;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #6b7280;
+        }
+
+        .detail {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .detail-content {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .detail h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .detail p {
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 28px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #020617;
+            color: #94a3b8;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 65px 20px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Dijital <span>Köprü</span>
+    </div>
+
+    <a href="./index.html" class="back">
+        ← Ana Sayfaya Dön
+    </a>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-icon">
+        🌐
+    </div>
+
+    <h1>
+        Web Tasarım
+    </h1>
+
+    <p>
+        İşletmeniz için modern, hızlı, mobil uyumlu ve
+        profesyonel web siteleri hazırlıyoruz.
+    </p>
+
+</section>
+
+<section>
+
+    <div class="section-title">
+
+        <h2>
+            Neler Yapıyoruz?
+        </h2>
+
+        <p>
+            İşletmeniz için sunduğumuz web tasarım çözümleri.
+        </p>
+
+    </div>
+
+    <div class="services">
+
+        <a href="#kurumsal" class="service-card">
+
+            <div class="service-icon">🏢</div>
+
+            <h3>
+                Kurumsal Web Sitesi
+            </h3>
+
+            <p>
+                İşletmenizi profesyonel şekilde tanıtan
+                modern kurumsal web siteleri hazırlıyoruz.
+            </p>
+
+        </a>
+
+        <a href="#mobil" class="service-card">
+
+            <div class="service-icon">📱</div>
+
+            <h3>
+                Mobil Uyumlu Tasarım
+            </h3>
+
+            <p>
+                Web sitenizin telefon, tablet ve bilgisayarda
+                düzgün görünmesini sağlıyoruz.
+            </p>
+
+        </a>
+
+        <a href="#hizli" class="service-card">
+
+            <div class="service-icon">⚡</div>
+
+            <h3>
+                Hızlı Web Siteleri
+            </h3>
+
+            <p>
+                Kullanıcıların hızlı şekilde gezebileceği
+                performanslı web siteleri oluşturuyoruz.
+            </p>
+
+        </a>
+
+        <a href="#tasarim" class="service-card">
+
+            <div class="service-icon">🎨</div>
+
+            <h3>
+                Özel Tasarım
+            </h3>
+
+            <p>
+                Markanızın tarzına uygun özgün ve modern
+                tasarımlar hazırlıyoruz.
+            </p>
+
+        </a>
+
+        <a href="#seo" class="service-card">
+
+            <div class="service-icon">🔎</div>
+
+            <h3>
+                SEO Uyumlu Yapı
+            </h3>
+
+            <p>
+                Arama motorlarının anlayabileceği düzenli
+                ve kullanıcı dostu web siteleri oluşturuyoruz.
+            </p>
+
+        </a>
+
+        <a href="#iletisim" class="service-card">
+
+            <div class="service-icon">📩</div>
+
+            <h3>
+                İletişim Sistemleri
+            </h3>
+
+            <p>
+                Müşterilerinizin size kolayca ulaşabilmesi
+                için iletişim alanları hazırlıyoruz.
+            </p>
+
+        </a>
+
+    </div>
+
+</section>
+
+<section class="detail" id="kurumsal">
+
+    <div class="detail-content">
+
+        <h2>
+            Kurumsal Web Sitesi
+        </h2>
+
+        <p>
+            İşletmenizin hizmetlerini, çalışmalarını ve
+            iletişim bilgilerini profesyonel bir şekilde
+            müşterilerinize sunuyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="mobil">
+
+    <div class="section-title">
+
+        <h2>
+            Mobil Uyumlu Tasarım
+        </h2>
+
+        <p>
+            Web sitenizin farklı ekran boyutlarında
+            düzgün ve kullanışlı görünmesini sağlıyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="detail" id="hizli">
+
+    <div class="detail-content">
+
+        <h2>
+            Hızlı Web Siteleri
+        </h2>
+
+        <p>
+            Gereksiz yüklerden uzak, hızlı açılan ve
+            kullanıcı deneyimine önem veren siteler hazırlıyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="tasarim">
+
+    <div class="section-title">
+
+        <h2>
+            Özel Tasarım
+        </h2>
+
+        <p>
+            Hazır kalıplar yerine işletmenizin ihtiyaçlarına
+            uygun modern tasarımlar oluşturuyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="detail" id="seo">
+
+    <div class="detail-content">
+
+        <h2>
+            SEO Uyumlu Yapı
+        </h2>
+
+        <p>
+            Sitenizin arama motorlarında daha anlaşılır
+            olması için temel SEO yapısını oluşturuyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="iletisim">
+
+    <div class="section-title">
+
+        <h2>
+            İletişim Sistemleri
+        </h2>
+
+        <p>
+            Telefon, e-posta ve diğer iletişim yöntemleriyle
+            müşterilerinizin size kolayca ulaşmasını sağlıyoruz.
+        </p>
+
+        <a href="./index.html#iletisim" class="button">
+            📩 Teklif Al
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Dijital Köprü — Tüm hakları saklıdır.
+    </p>
+
+</footer>
+
+</body>
+</html>

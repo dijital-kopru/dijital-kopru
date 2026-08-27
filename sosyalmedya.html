@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sosyal Medya | Dijital Köprü</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #111827;
+            line-height: 1.6;
+        }
+
+        /* MENÜ */
+
+        header {
+            background: #111827;
+
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #60a5fa;
+        }
+
+        .back {
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .back:hover {
+            color: #60a5fa;
+        }
+
+        /* BAŞLIK */
+
+        .hero {
+            background:
+                radial-gradient(circle at top right, #2563eb55, transparent 35%),
+                #0f172a;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 100px 20px;
+        }
+
+        .hero-icon {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+
+            color: #cbd5e1;
+
+            font-size: 18px;
+        }
+
+        /* GENEL */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        /* HİZMET KUTULARI */
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            width: 300px;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            text-decoration: none;
+
+            color: #111827;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            font-size: 45px;
+
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #6b7280;
+        }
+
+        /* ALT BİLGİ */
+
+        .info {
+            background: #111827;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .info-content {
+            max-width: 750px;
+
+            margin: auto;
+        }
+
+        .info h2 {
+            font-size: 38px;
+
+            margin-bottom: 20px;
+        }
+
+        .info p {
+            color: #cbd5e1;
+
+            font-size: 18px;
+        }
+
+        /* BUTON */
+
+        .button {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 15px 28px;
+
+            background: #2563eb;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #020617;
+
+            color: #94a3b8;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        /* TELEFON */
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 65px 20px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- MENÜ -->
+
+<header>
+
+    <div class="logo">
+        Dijital <span>Köprü</span>
+    </div>
+
+    <a href="./index.html" class="back">
+        ← Ana Sayfaya Dön
+    </a>
+
+</header>
+
+
+<!-- BAŞLIK -->
+
+<section class="hero">
+
+    <div class="hero-icon">
+        📱
+    </div>
+
+    <h1>
+        Sosyal Medya
+    </h1>
+
+    <p>
+        Markanızın sosyal medyada daha güçlü, profesyonel
+        ve dikkat çekici görünmesi için çözümler sunuyoruz.
+    </p>
+
+</section>
+
+
+<!-- HİZMETLER -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>
+            Neler Yapıyoruz?
+        </h2>
+
+        <p>
+            Markanız için sunduğumuz sosyal medya hizmetleri.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+
+        <a href="#yonetim" class="service-card">
+
+            <div class="service-icon">
+                📱
+            </div>
+
+            <h3>
+                Sosyal Medya Yönetimi
+            </h3>
+
+            <p>
+                Instagram ve diğer sosyal medya hesaplarınızı
+                düzenli ve profesyonel şekilde yönetiyoruz.
+            </p>
+
+        </a>
+
+
+        <a href="#tasarim" class="service-card">
+
+            <div class="service-icon">
+                🎨
+            </div>
+
+            <h3>
+                İçerik Tasarımı
+            </h3>
+
+            <p>
+                Markanıza uygun gönderi, hikâye ve kampanya
+                tasarımları hazırlıyoruz.
+            </p>
+
+        </a>
+
+
+        <a href="#fotograf" class="service-card">
+
+            <div class="service-icon">
+                📸
+            </div>
+
+            <h3>
+                Profesyonel Fotoğraf
+            </h3>
+
+            <p>
+                Ürün ve işletme fotoğraflarınızı sosyal medyada
+                kullanılabilecek şekilde hazırlıyoruz.
+            </p>
+
+        </a>
+
+
+        <a href="#reels" class="service-card">
+
+            <div class="service-icon">
+                🎬
+            </div>
+
+            <h3>
+                Reels & Video
+            </h3>
+
+            <p>
+                Kısa videolar, Reels ve dikkat çekici
+                sosyal medya içerikleri oluşturuyoruz.
+            </p>
+
+        </a>
+
+
+        <a href="#analiz" class="service-card">
+
+            <div class="service-icon">
+                📊
+            </div>
+
+            <h3>
+                Hesap Analizi
+            </h3>
+
+            <p>
+                Hesabınızın performansını inceleyip
+                geliştirilebilecek noktaları belirliyoruz.
+            </p>
+
+        </a>
+
+
+        <a href="#buyume" class="service-card">
+
+            <div class="service-icon">
+                📈
+            </div>
+
+            <h3>
+                Büyüme Stratejisi
+            </h3>
+
+            <p>
+                Markanızın sosyal medyada daha fazla kişiye
+                ulaşması için stratejiler geliştiriyoruz.
+            </p>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- DETAYLAR -->
+
+<section class="info" id="yonetim">
+
+    <div class="info-content">
+
+        <h2>
+            Sosyal Medya Yönetimi
+        </h2>
+
+        <p>
+            İçerik planlaması, paylaşım düzeni ve hesap yönetimi
+            ile markanızın sosyal medyada aktif kalmasını sağlıyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="tasarim">
+
+    <div class="section-title">
+
+        <h2>
+            İçerik Tasarımı
+        </h2>
+
+        <p>
+            Gönderi, hikâye ve kampanya içerikleriyle markanızın
+            görsel kimliğini güçlendiriyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="fotograf" class="info">
+
+    <div class="info-content">
+
+        <h2>
+            Profesyonel Fotoğraf
+        </h2>
+
+        <p>
+            Ürünlerinizi ve işletmenizi daha kaliteli ve
+            dikkat çekici şekilde tanıtmanıza yardımcı oluyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="reels">
+
+    <div class="section-title">
+
+        <h2>
+            Reels & Video
+        </h2>
+
+        <p>
+            Kısa, hızlı ve dikkat çekici videolarla
+            sosyal medya etkileşiminizi artırmayı hedefliyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="analiz" class="info">
+
+    <div class="info-content">
+
+        <h2>
+            Hesap Analizi
+        </h2>
+
+        <p>
+            Hesabınızın içerik performansını inceleyerek
+            daha iyi sonuçlar için geliştirme alanları belirliyoruz.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="buyume">
+
+    <div class="section-title">
+
+        <h2>
+            Büyüme Stratejisi
+        </h2>
+
+        <p>
+            Hedef kitlenize ulaşmak ve markanızı büyütmek için
+            uygulanabilir sosyal medya stratejileri oluşturuyoruz.
+        </p>
+
+        <a href="./index.html#iletisim" class="button">
+            📩 Teklif Al
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Dijital Köprü — Tüm hakları saklıdır.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
