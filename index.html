@@ -4,269 +4,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Dijital Köprü | Dijital Çözümler</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f5f7fb;color:#111827;line-height:1.6}
+
+header{
+background:#0f172a;padding:18px 7%;display:flex;
+justify-content:space-between;align-items:center;
+position:sticky;top:0;z-index:1000
 }
 
-html {
-    scroll-behavior: smooth;
+.logo{color:white;font-size:25px;font-weight:800}
+.logo span{color:#60a5fa}
+
+nav{display:flex;gap:25px}
+nav a{color:#e5e7eb;text-decoration:none}
+nav a:hover{color:#60a5fa}
+
+.hero{
+min-height:680px;padding:80px 20px;
+display:flex;justify-content:center;align-items:center;
+text-align:center;color:white;
+background:radial-gradient(circle at 80% 20%,#2563eb66,transparent 30%),linear-gradient(135deg,#020617,#172554)
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f7fb;
-    color: #111827;
+.hero-content{max-width:850px}
+.badge{
+display:inline-block;padding:8px 18px;border:1px solid #60a5fa;
+border-radius:50px;color:#93c5fd;margin-bottom:25px
 }
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #0f172a;
-    padding: 18px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.hero h1{font-size:62px;line-height:1.1;margin-bottom:25px}
+.hero h1 span{color:#60a5fa}
+.hero p{max-width:700px;margin:auto;color:#cbd5e1;font-size:19px}
+
+.buttons{margin-top:35px}
+.button{
+display:inline-block;padding:15px 28px;margin:5px;
+border-radius:10px;text-decoration:none;font-weight:bold;transition:.3s
+}
+.primary{background:#2563eb;color:white}
+.primary:hover{background:#1d4ed8;transform:translateY(-3px)}
+.secondary{border:1px solid #64748b;color:white}
+.secondary:hover{background:white;color:#111827}
+
+section{padding:90px 7%}
+.title{text-align:center;margin-bottom:50px}
+.title h2{font-size:40px;margin-bottom:10px}
+.title p{color:#6b7280}
+
+.cards{
+display:flex;justify-content:center;gap:25px;flex-wrap:wrap
 }
 
-.logo {
-    color: white;
-    font-size: 24px;
-    font-weight: 800;
+.card{
+width:300px;padding:35px;background:white;border-radius:18px;
+text-decoration:none;color:#111827;
+box-shadow:0 10px 30px #00000012;transition:.3s
+}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 40px #0000001c}
+.icon{font-size:45px;margin-bottom:20px}
+.card h3{font-size:22px;margin-bottom:12px}
+.card p{color:#6b7280}
+
+.portfolio{background:#eaf0f7}
+
+.about{background:#111827;color:white;text-align:center}
+.about-content{max-width:750px;margin:auto}
+.about h2{font-size:40px;margin-bottom:20px}
+.about p{color:#cbd5e1;font-size:18px}
+
+.contact{background:white;text-align:center}
+.contact-box{
+max-width:650px;margin:auto;padding:40px;background:#f8fafc;
+border-radius:18px;box-shadow:0 10px 30px #0000000f
+}
+.contact-box p{color:#6b7280;margin-bottom:20px}
+
+.social{
+display:inline-block;margin:10px;padding:12px 20px;
+border-radius:10px;background:#111827;color:white;
+text-decoration:none
+}
+.social:hover{background:#2563eb}
+
+footer{
+background:#020617;color:#94a3b8;text-align:center;padding:30px
 }
 
-.logo span {
-    color: #60a5fa;
-}
-
-nav {
-    display: flex;
-    gap: 25px;
-}
-
-nav a {
-    color: #e5e7eb;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-nav a:hover {
-    color: #60a5fa;
-}
-
-.hero {
-    min-height: 680px;
-    padding: 80px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    background:
-        radial-gradient(circle at 80% 20%, #2563eb55, transparent 30%),
-        linear-gradient(135deg, #020617, #172554);
-}
-
-.hero-content {
-    max-width: 850px;
-}
-
-.badge {
-    display: inline-block;
-    padding: 8px 18px;
-    border: 1px solid #60a5fa;
-    border-radius: 50px;
-    color: #93c5fd;
-    margin-bottom: 25px;
-    font-size: 14px;
-}
-
-.hero h1 {
-    font-size: 62px;
-    line-height: 1.1;
-    margin-bottom: 25px;
-}
-
-.hero h1 span {
-    color: #60a5fa;
-}
-
-.hero p {
-    max-width: 700px;
-    margin: auto;
-    color: #cbd5e1;
-    font-size: 19px;
-}
-
-.buttons {
-    margin-top: 35px;
-}
-
-.button {
-    display: inline-block;
-    padding: 15px 28px;
-    margin: 5px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.primary {
-    background: #2563eb;
-    color: white;
-}
-
-.primary:hover {
-    background: #1d4ed8;
-    transform: translateY(-3px);
-}
-
-.secondary {
-    border: 1px solid #64748b;
-    color: white;
-}
-
-.secondary:hover {
-    background: white;
-    color: #111827;
-}
-
-section {
-    padding: 90px 7%;
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.title h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.title p {
-    color: #6b7280;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.card {
-    width: 300px;
-    padding: 35px;
-    background: white;
-    border-radius: 18px;
-    text-decoration: none;
-    color: #111827;
-    box-shadow: 0 10px 30px #00000012;
-    transition: .3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px #0000001c;
-}
-
-.icon {
-    font-size: 45px;
-    margin-bottom: 20px;
-}
-
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-.card p {
-    color: #6b7280;
-}
-
-.portfolio {
-    background: #eaf0f7;
-}
-
-.about {
-    background: #111827;
-    color: white;
-    text-align: center;
-}
-
-.about-content {
-    max-width: 750px;
-    margin: auto;
-}
-
-.about h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.about p {
-    color: #cbd5e1;
-    font-size: 18px;
-}
-
-.contact {
-    background: white;
-    text-align: center;
-}
-
-.contact-box {
-    max-width: 600px;
-    margin: auto;
-    padding: 40px;
-    background: #f8fafc;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px #0000000f;
-}
-
-.contact-box p {
-    color: #6b7280;
-    margin-bottom: 25px;
-}
-
-footer {
-    background: #020617;
-    color: #94a3b8;
-    text-align: center;
-    padding: 30px;
-}
-
-@media (max-width: 700px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    section {
-        padding: 70px 20px;
-    }
+@media(max-width:700px){
+header{flex-direction:column;gap:15px}
+nav{gap:12px;flex-wrap:wrap;justify-content:center}
+.hero h1{font-size:42px}
+.hero p{font-size:17px}
+section{padding:70px 20px}
 }
 </style>
 </head>
@@ -274,178 +108,143 @@ footer {
 <body>
 
 <header>
-    <div class="logo">
-        Dijital <span>Köprü</span>
-    </div>
+<div class="logo">Dijital <span>Köprü</span></div>
 
-    <nav>
-        <a href="#anasayfa">Ana Sayfa</a>
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#portfoy">Portföy</a>
-        <a href="#hakkimizda">Hakkımızda</a>
-        <a href="#iletisim">İletişim</a>
-    </nav>
+<nav>
+<a href="#anasayfa">Ana Sayfa</a>
+<a href="#hizmetler">Hizmetler</a>
+<a href="#portfoy">Portföy</a>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#iletisim">İletişim</a>
+</nav>
 </header>
 
 <section class="hero" id="anasayfa">
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="badge">
-            🚀 Dijital dünyada markanızı büyütüyoruz
-        </div>
+<div class="badge">🚀 Dijital dünyada markanızı büyütüyoruz</div>
 
-        <h1>
-            İşletmenizi
-            <span>dijital dünyaya</span>
-            taşıyoruz.
-        </h1>
+<h1>
+İşletmenizi <span>dijital dünyaya</span> taşıyoruz.
+</h1>
 
-        <p>
-            Modern web siteleri, sosyal medya çözümleri ve
-            dijital içeriklerle işletmenizin internette
-            daha güçlü görünmesini sağlıyoruz.
-        </p>
+<p>
+Modern web siteleri, sosyal medya çözümleri ve dijital
+içeriklerle işletmenizin internette daha güçlü görünmesini sağlıyoruz.
+</p>
 
-        <div class="buttons">
-            <a href="#portfoy" class="button primary">
-                Çalışmalarımızı Gör
-            </a>
+<div class="buttons">
+<a href="#portfoy" class="button primary">Çalışmalarımızı Gör</a>
+<a href="#iletisim" class="button secondary">İletişime Geç</a>
+</div>
 
-            <a href="#iletisim" class="button secondary">
-                İletişime Geç
-            </a>
-        </div>
-
-    </div>
+</div>
 </section>
 
 <section id="hizmetler">
 
-    <div class="title">
-        <h2>Hizmetlerimiz</h2>
-        <p>İşletmeniz için modern dijital çözümler.</p>
-    </div>
+<div class="title">
+<h2>Hizmetlerimiz</h2>
+<p>İşletmeniz için modern dijital çözümler.</p>
+</div>
 
-    <div class="cards">
+<div class="cards">
 
-        <a href="./webtasarim.html" class="card">
-            <div class="icon">🌐</div>
-            <h3>Web Tasarım</h3>
-            <p>
-                Modern, hızlı, mobil uyumlu ve profesyonel
-                web siteleri hazırlıyoruz.
-            </p>
-        </a>
+<a href="./webtasarim.html" class="card">
+<div class="icon">🌐</div>
+<h3>Web Tasarım</h3>
+<p>Modern, hızlı, mobil uyumlu ve profesyonel web siteleri hazırlıyoruz.</p>
+</a>
 
-        <a href="./sosyalmedya.html" class="card">
-            <div class="icon">📱</div>
-            <h3>Sosyal Medya</h3>
-            <p>
-                Markanızın sosyal medyada daha güçlü
-                görünmesi için içerikler hazırlıyoruz.
-            </p>
-        </a>
+<a href="./sosyalmedya.html" class="card">
+<div class="icon">📱</div>
+<h3>Sosyal Medya</h3>
+<p>Markanızın sosyal medyada daha güçlü görünmesi için içerikler hazırlıyoruz.</p>
+</a>
 
-        <a href="./videoicerik.html" class="card">
-            <div class="icon">🎬</div>
-            <h3>Video & İçerik</h3>
-            <p>
-                Reels, kısa videolar ve dijital içeriklerle
-                markanızı öne çıkarıyoruz.
-            </p>
-        </a>
+<a href="./videoicerik.html" class="card">
+<div class="icon">🎬</div>
+<h3>Video & İçerik</h3>
+<p>Reels, kısa videolar ve dijital içeriklerle markanızı öne çıkarıyoruz.</p>
+</a>
 
-    </div>
+</div>
 </section>
 
 <section class="portfolio" id="portfoy">
 
-    <div class="title">
-        <h2>Çalışmalarımız</h2>
-        <p>Hazırladığımız demo web sitelerini inceleyin.</p>
-    </div>
+<div class="title">
+<h2>Çalışmalarımız</h2>
+<p>Hazırladığımız demo web sitelerini inceleyin.</p>
+</div>
 
-    <div class="cards">
+<div class="cards">
 
-        <a href="./berber.html" class="card">
-            <div class="icon">💈</div>
-            <h3>Berber Web Sitesi</h3>
-            <p>
-                Berber işletmeleri için hazırlanan modern
-                web sitesi çalışması.
-            </p>
-        </a>
+<a href="./berber.html" class="card">
+<div class="icon">💈</div>
+<h3>Berber Web Sitesi</h3>
+<p>Berber işletmeleri için hazırlanan modern web sitesi çalışması.</p>
+</a>
 
-        <a href="./restoran.html" class="card">
-            <div class="icon">🍔</div>
-            <h3>Restoran Web Sitesi</h3>
-            <p>
-                Restoranlar için hazırlanan modern
-                web sitesi çalışması.
-            </p>
-        </a>
+<a href="./restoran.html" class="card">
+<div class="icon">🍔</div>
+<h3>Restoran Web Sitesi</h3>
+<p>Restoranlar için hazırlanan modern web sitesi çalışması.</p>
+</a>
 
-        <a href="./otoyikama.html" class="card">
-            <div class="icon">🚗</div>
-            <h3>Oto Yıkama Web Sitesi</h3>
-            <p>
-                Oto yıkama işletmeleri için hazırlanan
-                demo web sitesi.
-            </p>
-        </a>
+<a href="./otoyikama.html" class="card">
+<div class="icon">🚗</div>
+<h3>Oto Yıkama Web Sitesi</h3>
+<p>Oto yıkama işletmeleri için hazırlanan demo web sitesi.</p>
+</a>
 
-    </div>
+</div>
 </section>
 
 <section class="about" id="hakkimizda">
 
-    <div class="about-content">
-        <h2>Dijital Köprü</h2>
+<div class="about-content">
+<h2>Dijital Köprü</h2>
 
-        <p>
-            İşletmeler ile dijital dünya arasında güçlü bir
-            köprü kuruyoruz. Web tasarım, sosyal medya ve
-            dijital içerik alanlarında modern çözümler
-            geliştiriyoruz.
-        </p>
-    </div>
+<p>
+İşletmeler ile dijital dünya arasında güçlü bir köprü kuruyoruz.
+Web tasarım, sosyal medya ve dijital içerik alanlarında
+modern çözümler geliştiriyoruz.
+</p>
+</div>
 
 </section>
 
 <section class="contact" id="iletisim">
 
-    <div class="title">
-        <h2>İletişime Geçelim</h2>
+<div class="title">
+<h2>İletişime Geçelim</h2>
+<p>Projeniz hakkında bizimle iletişime geçebilirsiniz.</p>
+</div>
 
-        <p>
-            İşletmenizi dijital dünyaya taşımaya hazır mısınız?
-        </p>
-    </div>
+<div class="contact-box">
 
-    <div class="contact-box">
+<p>
+Bize e-posta gönderebilir veya Instagram hesabımızdan ulaşabilirsiniz.
+</p>
 
-        <p>
-            Projeniz hakkında bilgi almak veya bizimle
-            iletişime geçmek için e-posta gönderebilirsiniz.
-        </p>
+<a href="mailto:info@dijitalkopru.com" class="button primary">
+📧 E-posta Gönder
+</a>
 
-        <a href="mailto:info@dijitalkopru.com"
-           class="button primary">
-            📩 E-posta Gönder
-        </a>
+<a href="https://www.instagram.com/dijitalkopru.tr/"
+target="_blank" class="social">
+📸 Instagram
+</a>
 
-    </div>
+</div>
 
 </section>
 
 <footer>
-    <p>
-        © 2026 Dijital Köprü — Tüm hakları saklıdır.
-    </p>
+<p>© 2026 Dijital Köprü — Tüm hakları saklıdır.</p>
 </footer>
 
 </body>
 </html>
 ```
-
-              
