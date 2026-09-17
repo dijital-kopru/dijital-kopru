@@ -1,458 +1,714 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Web Tasarım | Dijital Köprü</title>
+<title>Web Tasarım | Dijital Köprü</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta name="description" content="Dijital Köprü web tasarım hizmetleri. Modern, hızlı ve mobil uyumlu web siteleri.">
 
-        html {
-            scroll-behavior: smooth;
-        }
+<style>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fb;
-            color: #111827;
-            line-height: 1.6;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        header {
-            background: #111827;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        .logo {
-            color: white;
-            font-size: 25px;
-            font-weight: 800;
-        }
+body{
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    background:#060914;
+    color:#fff;
+    line-height:1.6;
+    overflow-x:hidden;
+}
 
-        .logo span {
-            color: #60a5fa;
-        }
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-        .back {
-            color: #e5e7eb;
-            text-decoration: none;
-        }
+/* HEADER */
 
-        .back:hover {
-            color: #60a5fa;
-        }
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(6,9,20,.82);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.07);
+}
 
-        .hero {
-            background:
-                radial-gradient(circle at top right, #2563eb55, transparent 35%),
-                #0f172a;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 
-        .hero-icon {
-            font-size: 70px;
-            margin-bottom: 20px;
-        }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:1px;
+}
 
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 15px;
-        }
+.logo img{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+    border-radius:12px;
+}
 
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            color: #cbd5e1;
-            font-size: 18px;
-        }
+.nav-links{
+    display:flex;
+    gap:28px;
+}
 
-        section {
-            padding: 80px 8%;
-        }
+.nav-links a{
+    color:#aeb7c8;
+    font-size:14px;
+    transition:.3s;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+.nav-links a:hover{
+    color:#fff;
+}
 
-        .section-title h2 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+/* HERO */
 
-        .section-title p {
-            color: #6b7280;
-        }
+.hero{
+    min-height:650px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px;
+    overflow:hidden;
 
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
+    background:
+        radial-gradient(circle at 50% 15%,rgba(79,112,255,.22),transparent 32%),
+        #060914;
+}
 
-        .service-card {
-            width: 300px;
-            background: white;
-            padding: 35px;
-            border-radius: 18px;
-            text-decoration: none;
-            color: #111827;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-            transition: 0.3s;
-        }
+.hero-content{
+    max-width:850px;
+}
 
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-        }
+.tag{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:9px 16px;
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(255,255,255,.04);
+    border-radius:50px;
+    color:#aeb9cc;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:25px;
+}
 
-        .service-icon {
-            font-size: 45px;
-            margin-bottom: 20px;
-        }
+.tag span{
+    width:7px;
+    height:7px;
+    background:#7d9cff;
+    border-radius:50%;
+    box-shadow:0 0 15px #7d9cff;
+}
 
-        .service-card h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
+.hero h1{
+    font-size:clamp(46px,7vw,76px);
+    line-height:1;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
 
-        .service-card p {
-            color: #6b7280;
-        }
+.gradient{
+    background:linear-gradient(90deg,#fff,#9eb2ff,#6ed9ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 
-        .detail {
-            background: #111827;
-            color: white;
-            text-align: center;
-        }
+.hero p{
+    max-width:680px;
+    margin:auto;
+    color:#929daf;
+    font-size:18px;
+}
 
-        .detail-content {
-            max-width: 750px;
-            margin: auto;
-        }
+.buttons{
+    margin-top:32px;
+    display:flex;
+    justify-content:center;
+    gap:13px;
+    flex-wrap:wrap;
+}
 
-        .detail h2 {
-            font-size: 38px;
-            margin-bottom: 20px;
-        }
+.btn{
+    padding:14px 24px;
+    border-radius:11px;
+    font-size:14px;
+    font-weight:800;
+    transition:.3s;
+}
 
-        .detail p {
-            color: #cbd5e1;
-            font-size: 18px;
-        }
+.primary{
+    background:#fff;
+    color:#070b14;
+}
 
-        .button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 28px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-        }
+.secondary{
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.12);
+}
 
-        .button:hover {
-            background: #1d4ed8;
-        }
+.btn:hover{
+    transform:translateY(-3px);
+}
 
-        footer {
-            background: #020617;
-            color: #94a3b8;
-            text-align: center;
-            padding: 30px;
-        }
+/* SECTIONS */
 
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:100px 24px;
+}
 
-            .hero h1 {
-                font-size: 40px;
-            }
+.heading{
+    text-align:center;
+    margin-bottom:55px;
+}
 
-            .hero p {
-                font-size: 16px;
-            }
+.heading small{
+    color:#8fa6ff;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+}
 
-            section {
-                padding: 65px 20px;
-            }
+.heading h2{
+    font-size:clamp(32px,5vw,48px);
+    letter-spacing:-2px;
+    margin:12px 0;
+}
 
-            .section-title h2 {
-                font-size: 32px;
-            }
-        }
-    </style>
+.heading p{
+    color:#8d98aa;
+    max-width:650px;
+    margin:auto;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.feature{
+    padding:32px;
+    border-radius:21px;
+    background:linear-gradient(145deg,#11192a,#0a101c);
+    border:1px solid rgba(255,255,255,.075);
+    transition:.35s;
+}
+
+.feature:hover{
+    transform:translateY(-7px);
+    border-color:rgba(125,150,255,.3);
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    background:rgba(255,255,255,.06);
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.feature h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.feature p{
+    color:#8e99ab;
+    font-size:14px;
+}
+
+/* PROCESS */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.step{
+    padding:28px;
+    border-radius:20px;
+    background:#0e1522;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.step-number{
+    color:#849cff;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.step h3{
+    margin:13px 0 8px;
+    font-size:18px;
+}
+
+.step p{
+    color:#8792a5;
+    font-size:13px;
+}
+
+/* INFO */
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.info-box{
+    padding:40px;
+    border-radius:22px;
+    background:linear-gradient(145deg,#101827,#0a101b);
+    border:1px solid rgba(255,255,255,.075);
+}
+
+.info-box h3{
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.info-box p{
+    color:#929daf;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+    padding:70px 30px;
+    border-radius:27px;
+    background:
+        radial-gradient(circle at 50% 0%,rgba(91,115,255,.2),transparent 50%),
+        #101827;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.cta h2{
+    font-size:clamp(32px,5vw,48px);
+    letter-spacing:-2px;
+    margin:10px 0 15px;
+}
+
+.cta p{
+    color:#929dae;
+    max-width:600px;
+    margin:auto;
+}
+
+/* FOOTER */
+
+footer{
+    padding:35px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.07);
+    color:#687386;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        gap:15px;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .features,
+    .info{
+        grid-template-columns:1fr;
+    }
+
+    .process{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:500px){
+
+    section{
+        padding:75px 18px;
+    }
+
+    .process{
+        grid-template-columns:1fr;
+    }
+
+    .nav-links a{
+        font-size:12px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
-    <div class="logo">
-        Dijital <span>Köprü</span>
-    </div>
+<div class="nav">
 
-    <a href="./index.html" class="back">
-        ← Ana Sayfaya Dön
-    </a>
+<a href="index.html" class="logo">
+    <img src="logo.png" alt="Dijital Köprü">
+    <span>DİJİTAL KÖPRÜ</span>
+</a>
+
+<nav class="nav-links">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="#ozellikler">Özellikler</a>
+    <a href="#surec">Süreç</a>
+    <a href="#iletisim">İletişim</a>
+</nav>
+
+</div>
 
 </header>
 
+
+<main>
+
+<!-- HERO -->
+
 <section class="hero">
 
-    <div class="hero-icon">
-        🌐
-    </div>
+<div class="hero-content">
 
-    <h1>
-        Web Tasarım
-    </h1>
+<div class="tag">
+    <span></span>
+    WEB TASARIM
+</div>
 
-    <p>
-        İşletmeniz için modern, hızlı, mobil uyumlu ve
-        profesyonel web siteleri hazırlıyoruz.
-    </p>
+<h1>
+    Markanız için<br>
+    <span class="gradient">profesyonel web sitesi.</span>
+</h1>
+
+<p>
+    Modern, hızlı, mobil uyumlu ve markanıza özel web siteleri
+    tasarlayarak işletmenizin dijital dünyadaki görünümünü güçlendiriyoruz.
+</p>
+
+<div class="buttons">
+
+<a href="#ozellikler" class="btn primary">
+    Hizmeti İncele →
+</a>
+
+<a href="#iletisim" class="btn secondary">
+    İletişime Geç
+</a>
+
+</div>
+
+</div>
 
 </section>
+
+
+<!-- ÖZELLİKLER -->
+
+<section id="ozellikler">
+
+<div class="heading">
+
+<small>WEB TASARIM</small>
+
+<h2>Profesyonel bir web sitesi.</h2>
+
+<p>
+    Sadece güzel görünen değil, ziyaretçilerin kolayca kullanabileceği
+    modern web siteleri oluşturuyoruz.
+</p>
+
+</div>
+
+
+<div class="features">
+
+<div class="feature">
+
+<div class="icon">🎨</div>
+
+<h3>Modern Tasarım</h3>
+
+<p>
+    Markanızın tarzına uygun, temiz ve profesyonel arayüzler.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">📱</div>
+
+<h3>Mobil Uyumlu</h3>
+
+<p>
+    Telefon, tablet ve bilgisayarlarda düzgün çalışan tasarımlar.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">⚡</div>
+
+<h3>Hızlı Yapı</h3>
+
+<p>
+    Kullanıcı deneyimini ön planda tutan sade ve performanslı yapı.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">🔒</div>
+
+<h3>Güven Veren Görünüm</h3>
+
+<p>
+    İşletmenizin internette daha profesyonel görünmesine yardımcı olur.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">🧩</div>
+
+<h3>İhtiyaca Özel</h3>
+
+<p>
+    Hazır kalıplar yerine projenin ihtiyacına göre yapılandırılır.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">🚀</div>
+
+<h3>Yayına Hazır</h3>
+
+<p>
+    Proje tamamlandıktan sonra yayına alınabilecek şekilde hazırlanır.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SÜREÇ -->
+
+<section id="surec">
+
+<div class="heading">
+
+<small>ÇALIŞMA SÜRECİ</small>
+
+<h2>Nasıl çalışıyoruz?</h2>
+
+<p>
+    Projeyi fikirden yayına kadar düzenli adımlarla geliştiriyoruz.
+</p>
+
+</div>
+
+
+<div class="process">
+
+<div class="step">
+
+<div class="step-number">01 — KEŞİF</div>
+
+<h3>İhtiyacı Anlıyoruz</h3>
+
+<p>
+    İşletmenin ve projenin ihtiyaçlarını belirliyoruz.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">02 — TASARIM</div>
+
+<h3>Tasarımı Planlıyoruz</h3>
+
+<p>
+    Sayfa yapısını ve görsel dili oluşturuyoruz.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">03 — GELİŞTİRME</div>
+
+<h3>Siteyi Oluşturuyoruz</h3>
+
+<p>
+    Tasarımı çalışan bir web sitesine dönüştürüyoruz.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">04 — TESLİM</div>
+
+<h3>Yayına Hazırlıyoruz</h3>
+
+<p>
+    Son kontrolleri yapıp projeyi teslim ediyoruz.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DETAY -->
 
 <section>
 
-    <div class="section-title">
+<div class="info">
 
-        <h2>
-            Neler Yapıyoruz?
-        </h2>
+<div class="info-box">
 
-        <p>
-            İşletmeniz için sunduğumuz web tasarım çözümleri.
-        </p>
+<h3>Kimler için?</h3>
 
-    </div>
+<p>
+    Berberler, restoranlar, kafeler, oto yıkamalar,
+    küçük işletmeler, kişisel markalar ve dijital dünyada
+    profesyonel görünmek isteyen işletmeler için uygundur.
+</p>
 
-    <div class="services">
+</div>
 
-        <a href="#kurumsal" class="service-card">
 
-            <div class="service-icon">🏢</div>
+<div class="info-box">
 
-            <h3>
-                Kurumsal Web Sitesi
-            </h3>
+<h3>Neler sunuyoruz?</h3>
 
-            <p>
-                İşletmenizi profesyonel şekilde tanıtan
-                modern kurumsal web siteleri hazırlıyoruz.
-            </p>
+<p>
+    Ana sayfa, hizmetler, hakkımızda, iletişim ve portföy
+    gibi bölümlerle işletmenize özel bir web sitesi yapısı
+    oluşturuyoruz.
+</p>
 
-        </a>
+</div>
 
-        <a href="#mobil" class="service-card">
-
-            <div class="service-icon">📱</div>
-
-            <h3>
-                Mobil Uyumlu Tasarım
-            </h3>
-
-            <p>
-                Web sitenizin telefon, tablet ve bilgisayarda
-                düzgün görünmesini sağlıyoruz.
-            </p>
-
-        </a>
-
-        <a href="#hizli" class="service-card">
-
-            <div class="service-icon">⚡</div>
-
-            <h3>
-                Hızlı Web Siteleri
-            </h3>
-
-            <p>
-                Kullanıcıların hızlı şekilde gezebileceği
-                performanslı web siteleri oluşturuyoruz.
-            </p>
-
-        </a>
-
-        <a href="#tasarim" class="service-card">
-
-            <div class="service-icon">🎨</div>
-
-            <h3>
-                Özel Tasarım
-            </h3>
-
-            <p>
-                Markanızın tarzına uygun özgün ve modern
-                tasarımlar hazırlıyoruz.
-            </p>
-
-        </a>
-
-        <a href="#seo" class="service-card">
-
-            <div class="service-icon">🔎</div>
-
-            <h3>
-                SEO Uyumlu Yapı
-            </h3>
-
-            <p>
-                Arama motorlarının anlayabileceği düzenli
-                ve kullanıcı dostu web siteleri oluşturuyoruz.
-            </p>
-
-        </a>
-
-        <a href="#iletisim" class="service-card">
-
-            <div class="service-icon">📩</div>
-
-            <h3>
-                İletişim Sistemleri
-            </h3>
-
-            <p>
-                Müşterilerinizin size kolayca ulaşabilmesi
-                için iletişim alanları hazırlıyoruz.
-            </p>
-
-        </a>
-
-    </div>
+</div>
 
 </section>
 
-<section class="detail" id="kurumsal">
 
-    <div class="detail-content">
-
-        <h2>
-            Kurumsal Web Sitesi
-        </h2>
-
-        <p>
-            İşletmenizin hizmetlerini, çalışmalarını ve
-            iletişim bilgilerini profesyonel bir şekilde
-            müşterilerinize sunuyoruz.
-        </p>
-
-    </div>
-
-</section>
-
-<section id="mobil">
-
-    <div class="section-title">
-
-        <h2>
-            Mobil Uyumlu Tasarım
-        </h2>
-
-        <p>
-            Web sitenizin farklı ekran boyutlarında
-            düzgün ve kullanışlı görünmesini sağlıyoruz.
-        </p>
-
-    </div>
-
-</section>
-
-<section class="detail" id="hizli">
-
-    <div class="detail-content">
-
-        <h2>
-            Hızlı Web Siteleri
-        </h2>
-
-        <p>
-            Gereksiz yüklerden uzak, hızlı açılan ve
-            kullanıcı deneyimine önem veren siteler hazırlıyoruz.
-        </p>
-
-    </div>
-
-</section>
-
-<section id="tasarim">
-
-    <div class="section-title">
-
-        <h2>
-            Özel Tasarım
-        </h2>
-
-        <p>
-            Hazır kalıplar yerine işletmenizin ihtiyaçlarına
-            uygun modern tasarımlar oluşturuyoruz.
-        </p>
-
-    </div>
-
-</section>
-
-<section class="detail" id="seo">
-
-    <div class="detail-content">
-
-        <h2>
-            SEO Uyumlu Yapı
-        </h2>
-
-        <p>
-            Sitenizin arama motorlarında daha anlaşılır
-            olması için temel SEO yapısını oluşturuyoruz.
-        </p>
-
-    </div>
-
-</section>
+<!-- CTA -->
 
 <section id="iletisim">
 
-    <div class="section-title">
+<div class="cta">
 
-        <h2>
-            İletişim Sistemleri
-        </h2>
+<small>PROJENİZİ KONUŞALIM</small>
 
-        <p>
-            Telefon, e-posta ve diğer iletişim yöntemleriyle
-            müşterilerinizin size kolayca ulaşmasını sağlıyoruz.
-        </p>
+<h2>Web sitenizi birlikte oluşturalım.</h2>
 
-        <a href="./index.html#iletisim" class="button">
-            📩 Teklif Al
-        </a>
+<p>
+    İşletmenizi dijital dünyada daha profesyonel gösterecek
+    bir web sitesi için Dijital Köprü ile iletişime geçin.
+</p>
 
-    </div>
+
+<div class="buttons">
+
+<a
+href="mailto:info@dijitalkopru.com"
+class="btn primary">
+    📧 E-posta Gönder
+</a>
+
+<a
+href="https://www.instagram.com/dijitalkopru.tr/"
+target="_blank"
+class="btn secondary">
+    📱 Instagram
+</a>
+
+</div>
+
+</div>
 
 </section>
 
+</main>
+
+
 <footer>
 
-    <p>
-        © 2026 Dijital Köprü — Tüm hakları saklıdır.
-    </p>
+© 2026 Dijital Köprü
+<br>
+Web Sitesi • Sosyal Medya • Dijital Çözümler
 
 </footer>
 
