@@ -3,257 +3,127 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dijital Köprü | Profesyonel Web Tasarım ve Dijital Çözümler</title>
-<meta name="description" content="Dijital Köprü; işletmeler için modern web tasarım, sosyal medya yönetimi ve dijital içerik çözümleri sunar. Markanızı dijital dünyada güçlendirin.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dijital Köprü | Web Tasarım ve Dijital Çözümler</title>
+<meta name="description" content="Dijital Köprü ile işletmeniz için profesyonel web tasarım, sosyal medya ve dijital içerik çözümleri.">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#0b1120">
-
 <style>
-:root {
-  --bg: #0b1120;
-  --panel: #111a2b;
-  --text: #f4f7fc;
-  --muted: #a5b1c5;
-  --blue: #6ba8ff;
-  --line: #26344a;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body {
-  font-family: Inter, Arial, Helvetica, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-}
-a { color: inherit; text-decoration: none; }
-.container { width: min(1120px, 90%); margin: auto; }
-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(11,17,32,.96);
-  border-bottom: 1px solid var(--line);
-}
-nav {
-  min-height: 76px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-  flex-wrap: wrap;
-  padding: 12px 0;
-}
-.brand {
-  font-size: 23px;
-  font-weight: 800;
-  letter-spacing: -.8px;
-}
-.brand span { color: var(--blue); }
-.navlinks { display: flex; gap: 22px; flex-wrap: wrap; }
-.navlinks a { color: #c3cede; font-size: 14px; }
-.navlinks a:hover { color: var(--blue); }
-.hero {
-  padding: 115px 0 105px;
-  border-bottom: 1px solid var(--line);
-  background: linear-gradient(135deg,#0b1120 45%,#10203b 100%);
-}
-.eyebrow {
-  color: var(--blue);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
-  font-weight: 700;
-}
-h1 {
-  max-width: 850px;
-  font-size: clamp(39px,6.5vw,70px);
-  line-height: 1.12;
-  letter-spacing: -2.5px;
-  margin: 20px 0;
-}
-h1 span { color: var(--blue); }
-.hero p {
-  color: var(--muted);
-  max-width: 670px;
-  font-size: 18px;
-}
-.actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
-.btn {
-  display: inline-block;
-  padding: 12px 21px;
-  border: 1px solid #35455e;
-  border-radius: 7px;
-  font-size: 14px;
-  font-weight: 700;
-  transition: .2s;
-}
-.btn.primary { background: #367fe0; border-color: #367fe0; color: white; }
-.btn:hover { transform: translateY(-2px); }
-section { padding: 82px 0; }
-.section-head { margin-bottom: 36px; }
-.section-head h2 { font-size: clamp(28px,4vw,39px); letter-spacing: -1px; }
-.section-head p { color: var(--muted); max-width: 650px; margin-top: 9px; }
-.grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 19px; }
-.card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 27px;
-  transition: border-color .2s, transform .2s;
-}
-.card:hover { border-color: #527db7; transform: translateY(-3px); }
-.number { color: var(--blue); font-size: 12px; letter-spacing: 1.5px; font-weight: 800; }
-.card h3 { font-size: 20px; margin: 12px 0 9px; }
-.card p { color: var(--muted); font-size: 15px; }
-.card a.more { display: inline-block; margin-top: 18px; color: var(--blue); font-size: 14px; font-weight: 700; }
-.pricing { background: #0e1727; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.price { font-size: 23px; font-weight: 800; margin: 18px 0 5px; }
-.price-note { color: #899ab2; font-size: 13px; }
-.about-wrap {
-  max-width: 800px;
-  padding-left: 25px;
-  border-left: 3px solid var(--blue);
-}
-.about-wrap p { color: var(--muted); margin-top: 15px; }
-.contact-panel {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 35px;
-}
-.contact-panel p { color: var(--muted); margin-top: 12px; }
-.contact-panel a { color: var(--blue); overflow-wrap: anywhere; }
-footer { border-top: 1px solid var(--line); padding: 25px 0; color: #8d9bb1; font-size: 13px; }
-.footer-row { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
-@media(max-width:780px) {
-  nav { justify-content: center; }
-  .navlinks { justify-content: center; gap: 12px 17px; }
-  .hero { padding: 78px 0; }
-  .grid { grid-template-columns: 1fr; }
-  section { padding: 60px 0; }
-  h1 { letter-spacing: -1.5px; }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Arial,Helvetica,sans-serif;background:#0b1120;color:#f5f7fb;line-height:1.7}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,90%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#0b1120;border-bottom:1px solid #26344a}
+nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:12px 0}
+.brand{font-size:23px;font-weight:800;letter-spacing:-.7px}
+.brand span{color:#72adff}
+.links{display:flex;gap:20px;flex-wrap:wrap}
+.links a{font-size:14px;color:#c4cede}
+.links a:hover{color:#72adff}
+.hero{padding:110px 0 100px;background:linear-gradient(135deg,#0b1120,#142541);border-bottom:1px solid #26344a}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#72adff;font-weight:bold}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.13;letter-spacing:-2px;max-width:850px;margin:20px 0}
+h1 span{color:#72adff}
+.hero p{max-width:650px;color:#b2bfd2;font-size:18px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:12px 20px;border:1px solid #40516a;border-radius:7px;font-size:14px;font-weight:bold}
+.btn.primary{background:#347fe0;border-color:#347fe0}
+.btn:hover{filter:brightness(1.12)}
+section{padding:75px 0}
+.heading{margin-bottom:30px}
+.heading h2{font-size:clamp(28px,4vw,38px);letter-spacing:-1px}
+.heading p{color:#aab7ca;max-width:650px;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:#111b2c;border:1px solid #29384e;border-radius:11px;padding:25px;transition:.2s}
+.card:hover{border-color:#648fc9;transform:translateY(-3px)}
+.num{font-size:12px;letter-spacing:1.5px;color:#72adff;font-weight:bold}
+.card h3{font-size:20px;margin:12px 0 8px}
+.card p{color:#afbdd0;font-size:15px}
+.more{display:inline-block;margin-top:17px;color:#72adff;font-size:14px;font-weight:bold}
+.band{background:#0e1727;border-block:1px solid #26344a}
+.about{max-width:780px;border-left:3px solid #72adff;padding-left:24px}
+.about p{color:#b2bfd2;margin-top:14px}
+.contactbox{padding:28px;background:#111b2c;border:1px solid #29384e;border-radius:11px}
+.contactbox p{margin-top:10px;color:#b2bfd2}
+.contactbox a{color:#72adff;overflow-wrap:anywhere}
+footer{border-top:1px solid #26344a;padding:24px 0;color:#8f9eb4;font-size:13px}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){
+nav{justify-content:center}
+.links{justify-content:center;gap:12px 16px}
+.hero{padding:75px 0}
+.grid{grid-template-columns:1fr}
+section{padding:55px 0}
+h1{letter-spacing:-1px}
 }
 </style>
 </head>
-
 <body>
 <header>
-  <nav class="container">
-    <a class="brand" href="#anasayfa">Dijital <span>Köprü</span></a>
-    <div class="navlinks">
-      <a href="#anasayfa">Ana Sayfa</a>
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#portfoy">Portföy</a>
-      <a href="#hakkimizda">Hakkımızda</a>
-      <a href="#iletisim">İletişim</a>
-    </div>
-  </nav>
+<nav class="container">
+<a class="brand" href="#anasayfa">Dijital <span>Köprü</span></a>
+<div class="links">
+<a href="#anasayfa">Ana Sayfa</a>
+<a href="#hizmetler">Hizmetler</a>
+<a href="#portfoy">Portföy</a>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#iletisim">İletişim</a>
+</div>
+</nav>
 </header>
-
 <main>
-  <section class="hero" id="anasayfa">
-    <div class="container">
-      <div class="eyebrow">Dijital strateji · Tasarım · Gelişim</div>
-      <h1>İşletmenizi dijital dünyaya taşıyın. <span>Güçlü bir başlangıç yapın.</span></h1>
-      <p>Markanızın internette profesyonel görünmesi için modern web siteleri, sosyal medya çözümleri ve dijital içerik hizmetleri.</p>
-      <div class="actions">
-        <a class="btn primary" href="#iletisim">Projenizi Konuşalım</a>
-        <a class="btn" href="#hizmetler">Hizmetlerimizi Keşfedin</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="hizmetler">
-    <div class="container">
-      <div class="section-head">
-        <h2>Hizmetlerimiz</h2>
-        <p>İşletmenizin hedeflerine uygun, anlaşılır ve işlevsel dijital çözümler.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="number">01 / TASARIM</div>
-          <h3>Web Tasarım</h3>
-          <p>Mobil uyumlu, modern ve kullanıcı dostu web siteleriyle işletmenizi dijital ortamda tanıtın.</p>
-          <a class="more" href="./webtasarim.html">Hizmeti incele →</a>
-        </article>
-        <article class="card">
-          <div class="number">02 / SOSYAL MEDYA</div>
-          <h3>Sosyal Medya</h3>
-          <p>Markanızın kimliğine uygun içerik fikirleri ve sosyal medya görünümü oluşturun.</p>
-          <a class="more" href="./sosyalmedya.html">Hizmeti incele →</a>
-        </article>
-        <article class="card">
-          <div class="number">03 / İÇERİK</div>
-          <h3>Video ve İçerik</h3>
-          <p>Dijital platformlar için tutarlı, ilgi çekici ve amaca yönelik içerik çözümleri.</p>
-          <a class="more" href="./videoicerik.html">Hizmeti incele →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="pricing" id="portfoy">
-    <div class="container">
-      <div class="section-head">
-        <h2>Örnek Çalışmalar</h2>
-        <p>Farklı sektörler için örnek web sitesi tasarımlarımızı inceleyin.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="number">ÖRNEK PROJE 01</div>
-          <h3>Berber Salonu</h3>
-          <p>Hizmetlerin, işletme bilgilerinin ve iletişim detaylarının sunulduğu örnek site.</p>
-          <a class="more" href="./berber.html">Projeyi incele →</a>
-        </article>
-        <article class="card">
-          <div class="number">ÖRNEK PROJE 02</div>
-          <h3>Restoran</h3>
-          <p>Restoran tanıtımı ve menü bilgileri için tasarlanmış örnek web sitesi.</p>
-          <a class="more" href="./restoran.html">Projeyi incele →</a>
-        </article>
-        <article class="card">
-          <div class="number">ÖRNEK PROJE 03</div>
-          <h3>Oto Yıkama</h3>
-          <p>Hizmetlerin ve iletişim bilgilerinin öne çıkarıldığı örnek işletme sitesi.</p>
-          <a class="more" href="./otoyikama.html">Projeyi incele →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="hakkimizda">
-    <div class="container">
-      <div class="about-wrap">
-        <div class="eyebrow">Hakkımızda</div>
-        <h2 style="font-size:clamp(28px,4vw,39px);margin-top:10px">Dijital dünyada doğru bağlantı.</h2>
-        <p>Dijital Köprü, işletmelerin dijital varlıklarını geliştirmelerine yardımcı olmayı amaçlayan bir dijital çözüm projesidir.</p>
-        <p>Önceliğimiz; sade tasarım, kolay kullanım ve her projenin ihtiyacına uygun çözümler üretmektir.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="iletisim">
-    <div class="container">
-      <div class="section-head">
-        <h2>Birlikte çalışalım.</h2>
-        <p>Projenizi anlatın. İhtiyacınıza uygun çözümü birlikte değerlendirelim.</p>
-      </div>
-      <div class="contact-panel">
-        <h3>İletişim Bilgileri</h3>
-        <p>E-posta: <a href="mailto:info@dijitalkopru.com">info@dijitalkopru.com</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/dijitalkopru.tr/" target="_blank" rel="noopener noreferrer">@dijitalkopru.tr</a></p>
-      </div>
-    </div>
-  </section>
+<section class="hero" id="anasayfa">
+<div class="container">
+<div class="eyebrow">Web Tasarım · Sosyal Medya · Dijital Çözümler</div>
+<h1>Dijital dünyada<br><span>güçlü bir iz bırakın.</span></h1>
+<p>İşletmenizin çevrim içi görünümünü geliştiren modern web siteleri ve dijital çözümlerle markanızı bir adım ileri taşıyın.</p>
+<div class="buttons">
+<a class="btn primary" href="#iletisim">Projenizi Konuşalım</a>
+<a class="btn" href="#hizmetler">Hizmetleri İncele</a>
+</div>
+</div>
+</section>
+<section id="hizmetler">
+<div class="container">
+<div class="heading"><h2>Hizmetlerimiz</h2><p>İşletmenizin ihtiyaçlarına göre sade, işlevsel ve modern dijital çözümler.</p></div>
+<div class="grid">
+<article class="card"><div class="num">01 / TASARIM</div><h3>Web Tasarım</h3><p>İşletmenizi tanıtan, mobil cihazlarla uyumlu ve kullanımı kolay web siteleri.</p><a class="more" href="./webtasarim.html">Detayları incele →</a></article>
+<article class="card"><div class="num">02 / SOSYAL MEDYA</div><h3>Sosyal Medya</h3><p>Markanızın kimliğine uygun içerik fikirleri ve sosyal medya desteği.</p><a class="more" href="./sosyalmedya.html">Detayları incele →</a></article>
+<article class="card"><div class="num">03 / İÇERİK</div><h3>Video ve İçerik</h3><p>Dijital platformlarda kullanabileceğiniz içerik ve video çözümleri.</p><a class="more" href="./videoicerik.html">Detayları incele →</a></article>
+</div>
+</div>
+</section>
+<section class="band" id="portfoy">
+<div class="container">
+<div class="heading"><h2>Örnek Çalışmalar</h2><p>Farklı işletme türleri için hazırlanan web sitesi örnekleri.</p></div>
+<div class="grid">
+<article class="card"><div class="num">PROJE 01</div><h3>Berber Salonu</h3><p>Hizmet ve iletişim bilgilerini sunan işletme sitesi örneği.</p><a class="more" href="./berber.html">Projeyi incele →</a></article>
+<article class="card"><div class="num">PROJE 02</div><h3>Restoran</h3><p>Restoran tanıtımı ve menü bilgileri için site örneği.</p><a class="more" href="./restoran.html">Projeyi incele →</a></article>
+<article class="card"><div class="num">PROJE 03</div><h3>Oto Yıkama</h3><p>Hizmetlerini tanıtmak isteyen işletmelere yönelik site örneği.</p><a class="more" href="./otoyikama.html">Projeyi incele →</a></article>
+</div>
+</div>
+</section>
+<section id="hakkimizda">
+<div class="container">
+<div class="about">
+<div class="eyebrow">Hakkımızda</div>
+<h2 style="font-size:clamp(28px,4vw,38px);margin-top:8px">Dijital Köprü hakkında</h2>
+<p>Dijital Köprü, işletmelerin dijital dünyada daha profesyonel bir görünüm kazanmasına yardımcı olmayı amaçlayan bir dijital çözüm projesidir.</p>
+<p>Amacımız; anlaşılır tasarım, kolay kullanım ve işletmenizin hedeflerine uygun çözümler sunmaktır.</p>
+</div>
+</div>
+</section>
+<section id="iletisim">
+<div class="container">
+<div class="heading"><h2>Birlikte çalışalım.</h2><p>Projenizi ve ihtiyaçlarınızı konuşmak için bizimle iletişime geçin.</p></div>
+<div class="contactbox">
+<h3>İletişim</h3>
+<p>E-posta: <a href="mailto:info@dijitalkopru.com">info@dijitalkopru.com</a></p>
+<p>Instagram: <a href="https://www.instagram.com/dijitalkopru.tr/" target="_blank" rel="noopener noreferrer">@dijitalkopru.tr</a></p>
+</div>
+</div>
+</section>
 </main>
-
-<footer>
-  <div class="container footer-row">
-    <span>© 2026 Dijital Köprü. Tüm hakları saklıdır.</span>
-    <span>Web Tasarım · Sosyal Medya · Dijital Çözümler</span>
-  </div>
-</footer>
+<footer><div class="container foot"><span>© 2026 Dijital Köprü. Tüm hakları saklıdır.</span><span>Web Tasarım · Sosyal Medya · Dijital Çözümler</span></div></footer>
 </body>
 </html>
-
