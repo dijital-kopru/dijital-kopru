@@ -5,11 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#070b14">
-<meta name="description" content="Dijital Köprü — Web tasarım, sosyal medya ve dijital içerik çözümleri.">
-<title>Dijital Köprü | Dijitalde Yeni Bir Bağlantı</title>
+<meta name="description" content="Dijital Köprü - Web tasarım, sosyal medya ve dijital içerik çözümleri.">
+<title>Dijital Köprü | Dijital Çözümler</title>
 
 <style>
-:root {
+:root{
   --bg:#070b14;
   --panel:#0d1422;
   --blue:#389cff;
@@ -21,65 +21,113 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{
-  font-family:Inter,Arial,sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   background:var(--bg);color:var(--text);
   line-height:1.65;overflow-x:hidden
 }
 a{color:inherit;text-decoration:none}
-button,a{-webkit-tap-highlight-color:transparent}
 .container{width:min(1160px,90%);margin:auto}
+
 header{
   position:sticky;top:0;z-index:20;
-  background:rgba(7,11,20,.88);
+  background:rgba(7,11,20,.92);
   backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line)
 }
-.navbar{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;font-size:21px;font-weight:800;letter-spacing:-.6px}
-.brand img{width:47px;height:47px;object-fit:contain;border-radius:12px}
-.brand span{color:var(--blue)}
-nav{display:flex;align-items:center;gap:24px}
+.navbar{
+  height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px
+}
+.brand{
+  display:flex;align-items:center;gap:12px;
+  white-space:nowrap
+}
+.brand-symbol{
+  width:43px;height:43px;display:grid;place-items:center;
+  border:1px solid rgba(56,156,255,.5);
+  border-radius:12px;
+  background:linear-gradient(145deg,#152944,#080d17);
+  color:white;font-size:17px;font-weight:900;
+  letter-spacing:-1px;
+  box-shadow:0 0 22px rgba(56,156,255,.12)
+}
+.brand-symbol span{color:var(--blue)}
+.brand-name{
+  color:#f4f7ff;font-size:15px;
+  font-weight:800;letter-spacing:1.2px
+}
+.brand-name span{color:var(--blue)}
+
+nav{display:flex;align-items:center;gap:23px}
 nav a{font-size:13px;color:#c0cada;transition:.2s}
 nav a:hover{color:var(--cyan)}
-.nav-cta{padding:10px 15px;border:1px solid #287ed0;border-radius:9px;color:white!important}
+.nav-cta{
+  padding:10px 15px;border:1px solid #287ed0;
+  border-radius:9px;color:white!important
+}
+
 .hero{
-  position:relative;min-height:650px;display:flex;align-items:center;
-  overflow:hidden;
+  position:relative;min-height:650px;
+  display:flex;align-items:center;overflow:hidden;
   background:
     radial-gradient(ellipse at 78% 38%,rgba(25,125,255,.20),transparent 35%),
     radial-gradient(ellipse at 15% 95%,rgba(28,77,174,.13),transparent 40%)
 }
 .hero:after{
-  content:"";position:absolute;right:-120px;top:70px;width:440px;height:440px;
-  border:1px solid rgba(67,163,255,.12);border-radius:50%;
-  box-shadow:0 0 0 50px rgba(67,163,255,.025),0 0 0 100px rgba(67,163,255,.02);
+  content:"";position:absolute;right:-120px;top:70px;
+  width:440px;height:440px;
+  border:1px solid rgba(67,163,255,.12);
+  border-radius:50%;
+  box-shadow:0 0 0 50px rgba(67,163,255,.025),
+             0 0 0 100px rgba(67,163,255,.02);
   pointer-events:none
 }
 .hero-inner{position:relative;z-index:1;padding:90px 0;max-width:790px}
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;
-  color:#8bcaff;font-size:12px;letter-spacing:2px;font-weight:800;
-  text-transform:uppercase;margin-bottom:24px
+  color:#8bcaff;font-size:12px;letter-spacing:2px;
+  font-weight:800;margin-bottom:24px
 }
-.dot{width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 15px var(--blue)}
-h1{font-size:clamp(42px,7vw,78px);line-height:1.04;letter-spacing:-3.5px;margin-bottom:25px}
-.gradient{background:linear-gradient(95deg,#fff 5%,#76c6ff 48%,#328aff 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--blue);box-shadow:0 0 15px var(--blue)
+}
+h1{
+  font-size:clamp(42px,7vw,78px);
+  line-height:1.04;letter-spacing:-3.5px;margin-bottom:25px
+}
+.gradient{
+  background:linear-gradient(95deg,#fff 5%,#76c6ff 48%,#328aff 95%);
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
 .hero p{font-size:17px;color:var(--muted);max-width:610px;margin-bottom:32px}
 .actions{display:flex;flex-wrap:wrap;gap:13px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:10px;font-weight:700;font-size:14px;transition:.25s;border:1px solid transparent}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:14px 21px;border-radius:10px;font-weight:700;
+  font-size:14px;transition:.25s;border:1px solid transparent
+}
 .btn:hover{transform:translateY(-3px)}
-.primary{background:linear-gradient(110deg,#1684ff,#45b5ff);color:white;box-shadow:0 8px 30px rgba(36,139,255,.2)}
+.primary{
+  background:linear-gradient(110deg,#1684ff,#45b5ff);
+  color:white;box-shadow:0 8px 30px rgba(36,139,255,.2)
+}
 .secondary{border-color:#27364b;background:rgba(255,255,255,.025)}
 .secondary:hover{border-color:var(--blue)}
 .trust{display:flex;gap:25px;flex-wrap:wrap;margin-top:48px;color:#aab7ca;font-size:12px}
 .trust span:before{content:"✓";color:var(--cyan);margin-right:8px}
+
 section{padding:92px 0}
 .section-head{margin-bottom:42px}
-.kicker{color:var(--blue);font-size:11px;letter-spacing:2px;font-weight:800;text-transform:uppercase;margin-bottom:10px}
-.section-head h2,.about-copy h2{font-size:clamp(30px,4vw,43px);line-height:1.15;letter-spacing:-1.5px;margin-bottom:12px}
+.kicker{color:var(--blue);font-size:11px;letter-spacing:2px;font-weight:800;margin-bottom:10px}
+.section-head h2,.about-copy h2{
+  font-size:clamp(30px,4vw,43px);
+  line-height:1.15;letter-spacing:-1.5px;margin-bottom:12px
+}
 .section-head p,.about-copy p{color:var(--muted);font-size:15px;max-width:650px}
 .center{text-align:center}
 .center p{margin:auto}
+
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .card{
   background:linear-gradient(145deg,rgba(18,29,47,.95),rgba(10,16,27,.95));
@@ -95,13 +143,19 @@ section{padding:92px 0}
 .card h3{font-size:19px;margin-bottom:9px}
 .card p{font-size:13px;color:var(--muted);margin-bottom:20px}
 .arrow{color:#69baff;font-size:13px;font-weight:800}
-.pricing{background:linear-gradient(180deg,#080d17,#0a101c,#080d17);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+.pricing{
+  background:linear-gradient(180deg,#080d17,#0a101c,#080d17);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+}
 .price{font-size:32px;font-weight:800;letter-spacing:-1px;margin:15px 0 3px}
 .price small{font-size:12px;color:var(--muted);font-weight:400;letter-spacing:0}
 .price-note{font-size:11px!important;color:#7e8ba0!important;margin-top:12px}
+
 .portfolio-card{min-height:235px;display:flex;flex-direction:column;justify-content:space-between}
 .project-label{color:#72bdff;font-size:10px;letter-spacing:1.5px;font-weight:800;margin-bottom:16px}
 .project-symbol{font-size:31px;margin-bottom:12px}
+
 .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
 .about-copy h2{margin-bottom:20px}
 .about-copy p{margin-bottom:15px}
@@ -112,22 +166,25 @@ section{padding:92px 0}
 .feature{display:flex;gap:15px;padding:17px 0;border-bottom:1px solid var(--line)}
 .feature:last-child{border:0;padding-bottom:0}
 .feature:first-child{padding-top:0}
-.feature-icon{font-size:21px}
+.feature-icon{font-size:21px;color:var(--cyan)}
 .feature strong{display:block;font-size:14px}
 .feature p{color:var(--muted);font-size:12px;margin-top:3px}
+
 .contact-wrap{
-  text-align:center;padding:60px 25px;border:1px solid rgba(56,156,255,.22);
-  border-radius:23px;background:
-  radial-gradient(ellipse at 50% 0%,rgba(32,124,255,.17),transparent 65%),#0b111d
+  text-align:center;padding:60px 25px;
+  border:1px solid rgba(56,156,255,.22);border-radius:23px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(32,124,255,.17),transparent 65%),#0b111d
 }
 .contact-wrap h2{font-size:clamp(30px,4vw,44px);letter-spacing:-1.5px;margin-bottom:12px}
 .contact-wrap p{color:var(--muted);max-width:570px;margin:0 auto 28px;font-size:14px}
 .contact-wrap .actions{justify-content:center}
+
 footer{border-top:1px solid var(--line);padding:25px 0;color:#8390a4;font-size:12px}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}
 .footer-brand{font-weight:800;color:#dbe7f7}
 .footer-brand span{color:var(--blue)}
 .instagram{color:#77bdff}
+
 @media(max-width:850px){
   nav{gap:13px}
   nav a{font-size:12px}
@@ -140,8 +197,9 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:#8390a4;font-size:1
 @media(max-width:620px){
   .container{width:90%}
   .navbar{height:68px}
-  .brand{font-size:18px;gap:9px}
-  .brand img{width:39px;height:39px}
+  .brand{gap:9px}
+  .brand-symbol{width:39px;height:39px}
+  .brand-name{font-size:13px;letter-spacing:1px}
   nav{display:none}
   .hero{min-height:570px}
   .hero-inner{padding:75px 0}
@@ -166,8 +224,8 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:#8390a4;font-size:1
 <header>
   <div class="container navbar">
     <a class="brand" href="#anasayfa" aria-label="Dijital Köprü ana sayfa">
-      <img src="./logo.png" alt="Dijital Köprü logosu">
-      <div>Dijital <span>Köprü</span></div>
+      <span class="brand-symbol">D<span>.</span>K</span>
+      <span class="brand-name">DİJİTAL <span>KÖPRÜ</span></span>
     </a>
     <nav aria-label="Ana menü">
       <a href="#hizmetler">Hizmetler</a>
@@ -180,173 +238,173 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:#8390a4;font-size:1
 </header>
 
 <main>
-  <section class="hero" id="anasayfa">
-    <div class="container">
-      <div class="hero-inner">
-        <div class="eyebrow"><span class="dot"></span> YENİ NESİL DİJİTAL ÇÖZÜMLER</div>
-        <h1>Fikirlerinizi<br><span class="gradient">dijital güce</span><br>dönüştürün.</h1>
-        <p>Markanız için modern web siteleri, yaratıcı sosyal medya tasarımları ve dijital içerikler. Dijital dünyada güçlü bir iz bırakın.</p>
-        <div class="actions">
-          <a class="btn primary" href="#hizmetler">Hizmetleri Keşfet ↗</a>
-          <a class="btn secondary" href="#portfoy">Projelerimizi Gör</a>
-        </div>
-        <div class="trust">
-          <span>Modern tasarım</span>
-          <span>Mobil uyumlu</span>
-          <span>Markanıza özel çözümler</span>
-        </div>
+<section class="hero" id="anasayfa">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="eyebrow"><span class="dot"></span> YENİ NESİL DİJİTAL ÇÖZÜMLER</div>
+      <h1>Fikirlerinizi<br><span class="gradient">dijital güce</span><br>dönüştürün.</h1>
+      <p>Markanız için modern web siteleri, yaratıcı sosyal medya tasarımları ve dijital içerikler. Dijital dünyada güçlü bir iz bırakın.</p>
+      <div class="actions">
+        <a class="btn primary" href="#hizmetler">Hizmetleri Keşfet ↗</a>
+        <a class="btn secondary" href="#portfoy">Projelerimizi Gör</a>
+      </div>
+      <div class="trust">
+        <span>Modern tasarım</span>
+        <span>Mobil uyumlu</span>
+        <span>Markanıza özel çözümler</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="hizmetler">
-    <div class="container">
-      <div class="section-head">
-        <div class="kicker">NELER YAPIYORUZ?</div>
-        <h2>Dijitalde ihtiyacınız olan her şey.</h2>
-        <p>İşletmenizin çevrim içi görünümünü geliştirmek için sade, modern ve kullanışlı çözümler.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <div class="icon">⌘</div>
-          <h3>Web Tasarım</h3>
-          <p>İşletmenizi tanıtan, telefon ve bilgisayarda düzgün çalışan modern web siteleri.</p>
-          <a class="arrow" href="./webtasarim.html">Detayları incele ↗</a>
-        </article>
-        <article class="card">
-          <div class="icon">◈</div>
-          <h3>Sosyal Medya</h3>
-          <p>Markanızın kimliğine uygun sosyal medya gönderileri, görsel tasarımlar ve içerik fikirleri.</p>
-          <a class="arrow" href="./sosyalmedya.html">Detayları incele ↗</a>
-        </article>
-        <article class="card">
-          <div class="icon">▷</div>
-          <h3>Video & İçerik</h3>
-          <p>Dijital platformlarda kullanılabilecek kısa videolar ve dikkat çekici içerik fikirleri.</p>
-          <a class="arrow" href="./videoicerik.html">Detayları incele ↗</a>
-        </article>
-      </div>
+<section id="hizmetler">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">NELER YAPIYORUZ?</div>
+      <h2>Dijitalde ihtiyacınız olan her şey.</h2>
+      <p>İşletmenizin çevrim içi görünümünü geliştirmek için sade, modern ve kullanışlı çözümler.</p>
     </div>
-  </section>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">⌘</div>
+        <h3>Web Tasarım</h3>
+        <p>İşletmenizi tanıtan, telefon ve bilgisayarda düzgün çalışan modern web siteleri.</p>
+        <a class="arrow" href="./webtasarim.html">Detayları incele ↗</a>
+      </article>
+      <article class="card">
+        <div class="icon">◈</div>
+        <h3>Sosyal Medya</h3>
+        <p>Markanızın kimliğine uygun sosyal medya gönderileri, görsel tasarımlar ve içerik fikirleri.</p>
+        <a class="arrow" href="./sosyalmedya.html">Detayları incele ↗</a>
+      </article>
+      <article class="card">
+        <div class="icon">▷</div>
+        <h3>Video & İçerik</h3>
+        <p>Dijital platformlarda kullanılabilecek kısa videolar ve dikkat çekici içerik fikirleri.</p>
+        <a class="arrow" href="./videoicerik.html">Detayları incele ↗</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-  <section class="pricing" id="fiyatlar">
-    <div class="container">
-      <div class="section-head center">
-        <div class="kicker">BAŞLANGIÇ FİYATLARI</div>
-        <h2>İhtiyacınıza uygun çözüm.</h2>
-        <p>Fiyatlar başlangıç seviyesindedir. Projenin kapsamına göre teklif hazırlanır.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <div class="icon">⌘</div>
-          <h3>Web Tasarım</h3>
-          <div class="price">₺2.500<small> + / proje</small></div>
-          <p>İşletmeniz için web sitesi tasarımı.</p>
-          <a class="btn secondary" href="./webtasarim.html">Paketi incele</a>
-          <p class="price-note">Fiyat, proje kapsamına göre değişebilir.</p>
-        </article>
-        <article class="card">
-          <div class="icon">◈</div>
-          <h3>Sosyal Medya</h3>
-          <div class="price">₺1.500<small> + / paket</small></div>
-          <p>Sosyal medya görsel ve içerik çalışmaları.</p>
-          <a class="btn secondary" href="./sosyalmedya.html">Paketi incele</a>
-          <p class="price-note">Fiyat, içerik sayısına göre değişebilir.</p>
-        </article>
-        <article class="card">
-          <div class="icon">▷</div>
-          <h3>Video & İçerik</h3>
-          <div class="price">₺1.000<small> + / paket</small></div>
-          <p>Kısa video ve dijital içerik çalışmaları.</p>
-          <a class="btn secondary" href="./videoicerik.html">Paketi incele</a>
-          <p class="price-note">Fiyat, çalışma kapsamına göre değişebilir.</p>
-        </article>
-      </div>
+<section class="pricing" id="fiyatlar">
+  <div class="container">
+    <div class="section-head center">
+      <div class="kicker">BAŞLANGIÇ FİYATLARI</div>
+      <h2>İhtiyacınıza uygun çözüm.</h2>
+      <p>Fiyatlar başlangıç seviyesindedir. Projenin kapsamına göre teklif hazırlanır.</p>
     </div>
-  </section>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">⌘</div>
+        <h3>Web Tasarım</h3>
+        <div class="price">₺2.500<small> + / proje</small></div>
+        <p>İşletmeniz için web sitesi tasarımı.</p>
+        <a class="btn secondary" href="./webtasarim.html">Paketi incele</a>
+        <p class="price-note">Fiyat, proje kapsamına göre değişebilir.</p>
+      </article>
+      <article class="card">
+        <div class="icon">◈</div>
+        <h3>Sosyal Medya</h3>
+        <div class="price">₺1.500<small> + / paket</small></div>
+        <p>Sosyal medya görsel ve içerik çalışmaları.</p>
+        <a class="btn secondary" href="./sosyalmedya.html">Paketi incele</a>
+        <p class="price-note">Fiyat, içerik sayısına göre değişebilir.</p>
+      </article>
+      <article class="card">
+        <div class="icon">▷</div>
+        <h3>Video & İçerik</h3>
+        <div class="price">₺1.000<small> + / paket</small></div>
+        <p>Kısa video ve dijital içerik çalışmaları.</p>
+        <a class="btn secondary" href="./videoicerik.html">Paketi incele</a>
+        <p class="price-note">Fiyat, çalışma kapsamına göre değişebilir.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-  <section id="portfoy">
-    <div class="container">
-      <div class="section-head">
-        <div class="kicker">SEÇİLMİŞ ÇALIŞMALAR</div>
-        <h2>Projelerimize göz atın.</h2>
-        <p>Farklı işletme türleri için hazırlanan örnek web sitesi tasarımları.</p>
-      </div>
-      <div class="cards">
-        <a href="./berber.html" class="card portfolio-card">
-          <div>
-            <div class="project-label">ÖRNEK PROJE / 01</div>
-            <div class="project-symbol">✂️</div>
-            <h3>Berber</h3>
-            <p>Hizmetlerini ve işletmesini çevrim içi tanıtmak isteyen berberler için.</p>
-          </div>
-          <span class="arrow">Projeyi görüntüle ↗</span>
-        </a>
-        <a href="./restoran.html" class="card portfolio-card">
-          <div>
-            <div class="project-label">ÖRNEK PROJE / 02</div>
-            <div class="project-symbol">✦</div>
-            <h3>Restoran</h3>
-            <p>Menü ve işletme bilgilerini şık bir sunumla öne çıkaran tasarım.</p>
-          </div>
-          <span class="arrow">Projeyi görüntüle ↗</span>
-        </a>
-        <a href="./otoyikama.html" class="card portfolio-card">
-          <div>
-            <div class="project-label">ÖRNEK PROJE / 03</div>
-            <div class="project-symbol">◉</div>
-            <h3>Oto Yıkama</h3>
-            <p>Hizmetleri ve iletişim bilgilerini müşterilere ulaştıran örnek site.</p>
-          </div>
-          <span class="arrow">Projeyi görüntüle ↗</span>
-        </a>
-      </div>
+<section id="portfoy">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">SEÇİLMİŞ ÇALIŞMALAR</div>
+      <h2>Projelerimize göz atın.</h2>
+      <p>Farklı işletme türleri için hazırlanan örnek web sitesi tasarımları.</p>
     </div>
-  </section>
+    <div class="cards">
+      <a href="./berber.html" class="card portfolio-card">
+        <div>
+          <div class="project-label">ÖRNEK PROJE / 01</div>
+          <div class="project-symbol">✂️</div>
+          <h3>Berber</h3>
+          <p>Hizmetlerini ve işletmesini çevrim içi tanıtmak isteyen berberler için.</p>
+        </div>
+        <span class="arrow">Projeyi görüntüle ↗</span>
+      </a>
+      <a href="./restoran.html" class="card portfolio-card">
+        <div>
+          <div class="project-label">ÖRNEK PROJE / 02</div>
+          <div class="project-symbol">✦</div>
+          <h3>Restoran</h3>
+          <p>Menü ve işletme bilgilerini şık bir sunumla öne çıkaran tasarım.</p>
+        </div>
+        <span class="arrow">Projeyi görüntüle ↗</span>
+      </a>
+      <a href="./otoyikama.html" class="card portfolio-card">
+        <div>
+          <div class="project-label">ÖRNEK PROJE / 03</div>
+          <div class="project-symbol">◉</div>
+          <h3>Oto Yıkama</h3>
+          <p>Hizmetleri ve iletişim bilgilerini müşterilere ulaştıran örnek site.</p>
+        </div>
+        <span class="arrow">Projeyi görüntüle ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-  <section id="hakkimizda">
-    <div class="container about-grid">
-      <div class="about-copy">
-        <div class="kicker">BİZ KİMİZ?</div>
-        <h2>Dijital dünya ile markanız arasında köprü.</h2>
-        <p>Dijital Köprü; web tasarım, sosyal medya ve dijital içerik alanlarında çözümler sunmayı hedefleyen bir dijital hizmet projesidir.</p>
-        <p>Önceliğimiz; anlaşılır tasarım, tutarlı marka görünümü ve farklı ekranlarda rahat kullanılan web deneyimleri oluşturmaktır.</p>
-        <a class="btn secondary" href="#iletisim">Projenizi konuşalım ↗</a>
+<section id="hakkimizda">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <div class="kicker">BİZ KİMİZ?</div>
+      <h2>Dijital dünya ile markanız arasında köprü.</h2>
+      <p>Dijital Köprü; web tasarım, sosyal medya ve dijital içerik alanlarında çözümler sunmayı hedefleyen bir dijital hizmet projesidir.</p>
+      <p>Önceliğimiz; anlaşılır tasarım, tutarlı marka görünümü ve farklı ekranlarda rahat kullanılan web deneyimleri oluşturmaktır.</p>
+      <a class="btn secondary" href="#iletisim">Projenizi konuşalım ↗</a>
+    </div>
+    <div class="about-box">
+      <div class="feature">
+        <div class="feature-icon">✦</div>
+        <div><strong>Özenli tasarım</strong><p>Markanızın tarzına uygun görsel yaklaşım.</p></div>
       </div>
-      <div class="about-box">
-        <div class="feature">
-          <div class="feature-icon">✦</div>
-          <div><strong>Özenli tasarım</strong><p>Markanızın tarzına uygun görsel yaklaşım.</p></div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">▣</div>
-          <div><strong>Mobil uyum</strong><p>Telefon, tablet ve bilgisayara uygun düzen.</p></div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">↗</div>
-          <div><strong>Net iletişim</strong><p>Proje kapsamı ve teslim süreci hakkında açık bilgi.</p></div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">◎</div>
-          <div><strong>Marka bütünlüğü</strong><p>Birbiriyle uyumlu dijital tasarım dili.</p></div>
-        </div>
+      <div class="feature">
+        <div class="feature-icon">▣</div>
+        <div><strong>Mobil uyum</strong><p>Telefon, tablet ve bilgisayara uygun düzen.</p></div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">↗</div>
+        <div><strong>Net iletişim</strong><p>Proje kapsamı ve teslim süreci hakkında açık bilgi.</p></div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">◎</div>
+        <div><strong>Marka bütünlüğü</strong><p>Birbiriyle uyumlu dijital tasarım dili.</p></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="iletisim">
-    <div class="container">
-      <div class="contact-wrap">
-        <div class="kicker">BİR SONRAKİ ADIM</div>
-        <h2>Projenizi hayata geçirelim.</h2>
-        <p>Bir web sitesi veya dijital içerik projeniz mi var? Bize e-posta ya da Instagram üzerinden ulaşabilirsiniz.</p>
-        <div class="actions">
-          <a class="btn primary" href="mailto:info@dijitalkopru.com">✉ E-posta gönder</a>
-          <a class="btn secondary" href="https://www.instagram.com/dijitalkopru.tr/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-        </div>
+<section id="iletisim">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="kicker">BİR SONRAKİ ADIM</div>
+      <h2>Projenizi hayata geçirelim.</h2>
+      <p>Bir web sitesi veya dijital içerik projeniz mi var? Bize e-posta ya da Instagram üzerinden ulaşabilirsiniz.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:info@dijitalkopru.com">✉ E-posta gönder</a>
+        <a class="btn secondary" href="https://www.instagram.com/dijitalkopru.tr/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -357,3 +415,4 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:#8390a4;font-size:1
 </footer>
 </body>
 </html>
+
