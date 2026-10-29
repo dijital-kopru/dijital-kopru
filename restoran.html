@@ -1,489 +1,150 @@
+
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Lezzet Durağı | Restoran</title>
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #fffaf5;
-            color: #29201a;
-            line-height: 1.6;
-        }
-
-        .demo {
-            text-align: center;
-            padding: 12px;
-
-            background: #29201a;
-            color: #ffffff;
-
-            font-size: 14px;
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            background: #ffffff;
-
-            padding: 20px 8%;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            box-shadow: 0 4px 15px #00000010;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .logo span {
-            color: #e76f00;
-        }
-
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            color: #29201a;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            color: #e76f00;
-        }
-
-        .hero {
-            min-height: 620px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-
-            padding: 80px 20px;
-
-            background:
-                linear-gradient(#00000088, #00000088),
-                #8b4513;
-
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .icon {
-            font-size: 75px;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: 58px;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #ffb347;
-        }
-
-        .hero p {
-            color: #f5f5f5;
-            font-size: 19px;
-        }
-
-        .button {
-            display: inline-block;
-
-            margin-top: 30px;
-
-            padding: 15px 30px;
-
-            background: #e76f00;
-
-            color: white;
-
-            text-decoration: none;
-
-            border-radius: 8px;
-
-            font-weight: bold;
-        }
-
-        section {
-            padding: 80px 8%;
-        }
-
-        .title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .title h2 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        .title p {
-            color: #756b63;
-        }
-
-        .menu {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .menu-card {
-            width: 280px;
-
-            background: white;
-
-            padding: 30px;
-
-            border-radius: 16px;
-
-            box-shadow: 0 8px 25px #00000010;
-
-            transition: 0.3s;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .food-icon {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
-
-        .menu-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .menu-card p {
-            color: #756b63;
-        }
-
-        .price {
-            display: block;
-
-            margin-top: 15px;
-
-            color: #e76f00;
-
-            font-size: 18px;
-
-            font-weight: bold;
-        }
-
-        .about {
-            background: #29201a;
-            color: white;
-
-            text-align: center;
-        }
-
-        .about-content {
-            max-width: 750px;
-            margin: auto;
-        }
-
-        .about p {
-            color: #ddd2c8;
-        }
-
-        .contact {
-            background: white;
-            text-align: center;
-        }
-
-        .contact p {
-            color: #756b63;
-            margin-top: 10px;
-        }
-
-        footer {
-            background: #17110d;
-            color: #aaa099;
-
-            text-align: center;
-
-            padding: 30px;
-        }
-
-        @media (max-width: 700px) {
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            section {
-                padding: 60px 20px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Olive Garden restoran demo sitesi. Lezzetli yemekler, özel menü ve sıcak bir atmosfer.">
+<title>OLIVA | Modern Restoran</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#faf7f0;color:#24352a;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,90%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#173c2b;color:#fff}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:3px}
+.brand span{color:#e2bd78}
+nav{display:flex;gap:24px;flex-wrap:wrap}
+nav a{font-size:14px;color:#eee8dc}
+nav a:hover{color:#e2bd78}
+.hero{min-height:590px;display:grid;place-items:center;text-align:center;color:#fff;padding:80px 0;background:linear-gradient(90deg,#11271fe8,#11271f88),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=85') center/cover}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;color:#e2bd78;font-size:12px;font-weight:bold}
+h1{font-family:Georgia,serif;font-size:clamp(42px,8vw,82px);line-height:1.1;margin:20px 0}
+.hero p{max-width:640px;margin:auto;color:#f1ede4;font-size:18px}
+.buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 24px;border:1px solid #e2bd78;border-radius:3px;font-weight:bold;transition:.2s}
+.btn.primary{background:#e2bd78;color:#183626}
+.btn:hover{transform:translateY(-3px)}
+section{padding:85px 0}
+.section-head{text-align:center;margin-bottom:42px}
+.section-head h2{font-family:Georgia,serif;font-size:clamp(30px,5vw,45px);margin:10px 0}
+.section-head p{color:#72796e}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dish{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 8px 25px #263d2910}
+.dish img{display:block;width:100%;height:220px;object-fit:cover}
+.dish-content{padding:23px}
+.dish h3{font-family:Georgia,serif;font-size:22px;margin-bottom:8px}
+.dish p{color:#777d73;font-size:14px;min-height:45px}
+.dish-bottom{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:18px}
+.price{font-weight:bold;color:#24623f;font-size:19px}
+.tag{font-size:11px;background:#edf3e8;color:#315c3c;padding:5px 8px;border-radius:20px}
+.about{background:#173c2b;color:white}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about h2{font-family:Georgia,serif;font-size:40px;margin:12px 0 18px}
+.about p{color:#e0e7de;margin-bottom:15px}
+.about img{width:100%;height:360px;object-fit:cover;border-radius:8px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;margin-top:42px}
+.feature{padding:22px;border:1px solid #ffffff30;border-radius:6px}
+.feature strong{display:block;color:#e2bd78;font-size:25px;margin-bottom:6px}
+.feature span{font-size:13px;color:#e0e7de}
+.contact{text-align:center}
+.contact p{max-width:600px;margin:12px auto;color:#6f776d}
+footer{background:#10271c;color:#d7ded5;padding:28px 0;text-align:center;font-size:13px}
+@media(max-width:760px){
+.nav{padding:15px 0;flex-direction:column}
+nav{justify-content:center;gap:14px}
+.menu-grid{grid-template-columns:1fr}
+.about-grid{grid-template-columns:1fr}
+.about img{height:260px}
+.features{grid-template-columns:1fr}
+section{padding:65px 0}
+}
+</style>
 </head>
-
-
 <body>
-
-
-<div class="demo">
-    DEMO WEB SİTESİ — Dijital Köprü
-</div>
-
-
 <header>
-
-    <div class="logo">
-        🍽️ Lezzet <span>Durağı</span>
-    </div>
-
-    <nav>
-
-        <a href="#anasayfa">Ana Sayfa</a>
-
-        <a href="#menu">Menü</a>
-
-        <a href="#hakkimizda">Hakkımızda</a>
-
-        <a href="#iletisim">İletişim</a>
-
-    </nav>
-
+<div class="container nav">
+<a class="brand" href="#anasayfa">OLI<span>VA</span></a>
+<nav>
+<a href="#anasayfa">Ana Sayfa</a>
+<a href="#menu">Menümüz</a>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#iletisim">İletişim</a>
+</nav>
+</div>
 </header>
 
-
+<main>
 <section class="hero" id="anasayfa">
-
-    <div class="hero-content">
-
-        <div class="icon">
-            🍔
-        </div>
-
-        <h1>
-            Lezzet <span>Durağı</span>
-        </h1>
-
-        <p>
-            Taze malzemeler, özel tarifler ve
-            unutulmaz lezzetler.
-        </p>
-
-        <a href="#menu" class="button">
-            Menüyü İncele
-        </a>
-
-    </div>
-
+<div class="container">
+<div class="eyebrow">Taze malzemeler · Özel tarifler</div>
+<h1>Lezzetin en<br>güzel <span style="color:#e2bd78">hali.</span></h1>
+<p>Her tabakta özen, her lokmada mutluluk. Sevdiklerinizle güzel anlar paylaşmanız için buradayız.</p>
+<div class="buttons">
+<a class="btn primary" href="#menu">Menüyü keşfet</a>
+<a class="btn" href="#iletisim">Bize ulaşın</a>
+</div>
+</div>
 </section>
-
 
 <section id="menu">
-
-    <div class="title">
-
-        <h2>Menümüz</h2>
-
-        <p>
-            En sevilen lezzetlerimizi keşfedin.
-        </p>
-
-    </div>
-
-
-    <div class="menu">
-
-
-        <div class="menu-card">
-
-            <div class="food-icon">
-                🍔
-            </div>
-
-            <h3>Özel Burger</h3>
-
-            <p>
-                Özel sos, taze sebzeler ve
-                kaliteli et ile hazırlanır.
-            </p>
-
-            <span class="price">
-                320 TL
-            </span>
-
-        </div>
-
-
-        <div class="menu-card">
-
-            <div class="food-icon">
-                🍕
-            </div>
-
-            <h3>Karışık Pizza</h3>
-
-            <p>
-                Bol malzemeli, sıcak ve
-                taptaze pizza.
-            </p>
-
-            <span class="price">
-                350 TL
-            </span>
-
-        </div>
-
-
-        <div class="menu-card">
-
-            <div class="food-icon">
-                🍝
-            </div>
-
-            <h3>Özel Makarna</h3>
-
-            <p>
-                Günlük hazırlanan özel
-                sosumuzla servis edilir.
-            </p>
-
-            <span class="price">
-                280 TL
-            </span>
-
-        </div>
-
-
-        <div class="menu-card">
-
-            <div class="food-icon">
-                🥤
-            </div>
-
-            <h3>Soğuk İçecek</h3>
-
-            <p>
-                Yemeklerinizin yanında
-                serinletici içecek seçenekleri.
-            </p>
-
-            <span class="price">
-                80 TL
-            </span>
-
-        </div>
-
-
-    </div>
-
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">Şefimizin seçimi</div>
+<h2>Favori lezzetlerimiz</h2>
+<p>Örnek menümüzden öne çıkan lezzetler.</p>
+</div>
+<div class="menu-grid">
+<article class="dish">
+<img src="https://images.unsplash.com/photo- pasta?auto=format&fit=crop&w=900&q=80" alt="Makarna tabağı" onerror="this.src='https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=80'">
+<div class="dish-content"><h3>Fesleğenli Makarna</h3><p>Taze fesleğen, parmesan ve özel domates sosu.</p><div class="dish-bottom"><span class="tag">Şefin önerisi</span><span class="price">₺320</span></div></div>
+</article>
+<article class="dish">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80" alt="Burger">
+<div class="dish-content"><h3>Gurme Burger</h3><p>Özel sos, taze yeşillikler ve çıtır patates.</p><div class="dish-bottom"><span class="tag">Popüler</span><span class="price">₺380</span></div></div>
+</article>
+<article class="dish">
+<img src="https://images.unsplash.com/photo-157 pizza?auto=format&fit=crop&w=900&q=80" alt="Pizza" onerror="this.src='https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=80'">
+<div class="dish-content"><h3>İtalyan Pizza</h3><p>İnce hamur, mozzarella ve taze malzemeler.</p><div class="dish-bottom"><span class="tag">Fırından yeni</span><span class="price">₺350</span></div></div>
+</article>
+</div>
+<p style="text-align:center;color:#858b80;font-size:12px;margin-top:20px">Fiyatlar ve menü demo amaçlıdır; gerçek işletmeye göre değiştirilmelidir.</p>
+</div>
 </section>
-
 
 <section class="about" id="hakkimizda">
-
-    <div class="about-content">
-
-        <div class="title">
-
-            <h2>Hakkımızda</h2>
-
-        </div>
-
-        <p>
-            Lezzet Durağı olarak misafirlerimize
-            kaliteli malzemelerle hazırlanmış,
-            lezzetli ve keyifli yemekler sunmayı
-            amaçlıyoruz.
-        </p>
-
-    </div>
-
+<div class="container about-grid">
+<div>
+<div class="eyebrow">Hikâyemiz</div>
+<h2>Güzel yemek, güzel anılar.</h2>
+<p>OLIVA, iyi yemeğin insanları bir araya getirdiği fikrinden doğan örnek bir restoran konseptidir.</p>
+<p>Taze malzemeler, özenli sunumlar ve sıcak bir atmosferle her ziyareti özel bir ana dönüştürmeyi hedefliyoruz.</p>
+<a class="btn primary" href="#iletisim">Bizimle tanışın</a>
+</div>
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85" alt="Şık restoran masaları">
+</div>
+<div class="container features">
+<div class="feature"><strong>01</strong><span>Taze malzemeler</span></div>
+<div class="feature"><strong>02</strong><span>Özenli sunum</span></div>
+<div class="feature"><strong>03</strong><span>Sıcak atmosfer</span></div>
+</div>
 </section>
-
 
 <section class="contact" id="iletisim">
-
-    <div class="title">
-
-        <h2>Bize Ulaşın</h2>
-
-        <p>
-            Rezervasyon ve bilgi için bize ulaşabilirsiniz.
-        </p>
-
-    </div>
-
-    <p>
-        📞 0555 555 55 55
-    </p>
-
-    <p>
-        📍 Mardin / Kızıltepe
-    </p>
-
-    <a href="tel:05555555555" class="button">
-        📞 Bizi Ara
-    </a>
-
+<div class="container">
+<div class="eyebrow">Sizi bekliyoruz</div>
+<h2 style="font-family:Georgia,serif;font-size:38px;margin-top:10px">Bir masa, güzel bir akşam.</h2>
+<p>Bu sayfa bir demo çalışmasıdır. Gerçek restoran için adres, telefon, açılış saatleri ve rezervasyon bağlantısı eklenebilir.</p>
+<div class="buttons">
+<a class="btn primary" href="mailto:info@dijitalkopru.com?subject=Restoran%20Demo%20Sitesi">Demo hakkında bilgi al</a>
+<a class="btn" href="./index.html">Dijital Köprü</a>
+</div>
+</div>
 </section>
+</main>
 
-
-<footer>
-
-    <p>
-        © 2026 Lezzet Durağı — Demo Web Sitesi
-    </p>
-
-    <p>
-        Dijital Köprü tarafından hazırlanmıştır.
-    </p>
-
-</footer>
-
-
+<footer><div class="container">OLIVA · Demo restoran sitesi · Dijital Köprü © 2026</div></footer>
 </body>
-
 </html>
