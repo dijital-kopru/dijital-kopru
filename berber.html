@@ -1,580 +1,151 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Berber Demo | Dijital Köprü</title>
-
-<meta name="description" content="Modern berber web sitesi demo tasarımı - Dijital Köprü.">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#08090b;
-    color:#fff;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(8,9,11,.82);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.navbar{
-    max-width:1180px;
-    margin:auto;
-    padding:16px 24px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:11px;
-    font-weight:800;
-    letter-spacing:1px;
-}
-
-.logo img{
-    width:42px;
-    height:42px;
-    object-fit:contain;
-}
-
-.logo span{
-    font-size:15px;
-}
-
-nav{
-    display:flex;
-    gap:26px;
-}
-
-nav a{
-    color:#aaa;
-    font-size:14px;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#fff;
-}
-
-.hero{
-    min-height:82vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:90px 20px;
-    background:
-        radial-gradient(circle at 50% 0%,rgba(255,255,255,.10),transparent 38%),
-        linear-gradient(180deg,#111318 0%,#08090b 100%);
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.badge{
-    display:inline-flex;
-    align-items:center;
-    gap:9px;
-    padding:8px 15px;
-    border:1px solid rgba(255,255,255,.13);
-    background:rgba(255,255,255,.035);
-    border-radius:50px;
-    color:#aaa;
-    font-size:12px;
-    letter-spacing:1.5px;
-    margin-bottom:25px;
-}
-
-.badge span{
-    width:7px;
-    height:7px;
-    border-radius:50%;
-    background:#fff;
-    box-shadow:0 0 12px rgba(255,255,255,.8);
-}
-
-.hero h1{
-    font-size:clamp(45px,7vw,82px);
-    line-height:1.02;
-    letter-spacing:-2px;
-    margin-bottom:24px;
-}
-
-.hero h1 span{
-    color:#8f939a;
-}
-
-.hero p{
-    max-width:650px;
-    margin:0 auto 35px;
-    color:#999;
-    font-size:17px;
-}
-
-.buttons{
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 23px;
-    border-radius:10px;
-    font-weight:700;
-    font-size:14px;
-    transition:.3s;
-}
-
-.btn-primary{
-    background:#fff;
-    color:#08090b;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 30px rgba(255,255,255,.12);
-}
-
-.btn-secondary{
-    border:1px solid rgba(255,255,255,.16);
-    color:#fff;
-    background:rgba(255,255,255,.025);
-}
-
-.btn-secondary:hover{
-    background:#fff;
-    color:#08090b;
-}
-
-section{
-    padding:95px 20px;
-}
-
-.container{
-    max-width:1120px;
-    margin:auto;
-}
-
-.section-heading{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-heading small{
-    color:#777;
-    font-size:12px;
-    letter-spacing:2px;
-}
-
-.section-heading h2{
-    margin-top:10px;
-    font-size:40px;
-    letter-spacing:-1px;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.card{
-    padding:30px;
-    border:1px solid rgba(255,255,255,.08);
-    background:linear-gradient(145deg,#121419,#0c0d10);
-    border-radius:20px;
-    transition:.35s;
-}
-
-.card:hover{
-    transform:translateY(-7px);
-    border-color:rgba(255,255,255,.18);
-}
-
-.card-icon{
-    width:52px;
-    height:52px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:14px;
-    background:rgba(255,255,255,.06);
-    font-size:24px;
-    margin-bottom:22px;
-}
-
-.card h3{
-    font-size:20px;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#85878c;
-    font-size:14px;
-}
-
-.about{
-    background:#0d0f12;
-    border-top:1px solid rgba(255,255,255,.05);
-    border-bottom:1px solid rgba(255,255,255,.05);
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.about h2{
-    font-size:44px;
-    line-height:1.1;
-    letter-spacing:-1px;
-    margin-bottom:20px;
-}
-
-.about p{
-    color:#909297;
-    margin-bottom:15px;
-}
-
-.info{
-    padding:32px;
-    border-radius:20px;
-    background:#121419;
-    border:1px solid rgba(255,255,255,.08);
-}
-
-.info h3{
-    margin-bottom:15px;
-}
-
-.info-item{
-    padding:14px 0;
-    border-bottom:1px solid rgba(255,255,255,.07);
-    color:#aaa;
-    font-size:14px;
-}
-
-.info-item:last-child{
-    border-bottom:none;
-}
-
-.contact{
-    text-align:center;
-}
-
-.contact p{
-    max-width:620px;
-    margin:15px auto 30px;
-    color:#888;
-}
-
-.demo-note{
-    margin-top:45px;
-    padding:16px 20px;
-    border:1px solid rgba(255,255,255,.07);
-    background:rgba(255,255,255,.025);
-    border-radius:12px;
-    color:#666;
-    font-size:12px;
-}
-
-footer{
-    padding:30px 20px;
-    border-top:1px solid rgba(255,255,255,.07);
-    text-align:center;
-    color:#666;
-    font-size:13px;
-}
-
-footer strong{
-    color:#fff;
-}
-
-@media(max-width:800px){
-
-    nav{
-        display:none;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modern erkek berberi. Profesyonel saç kesimi, sakal tasarımı ve kişisel bakım hizmetleri.">
+  <title>BLACK CROWN | Premium Barber</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:#101010;color:#f5f1e8;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,90%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#101010ee;border-bottom:1px solid #c6a45c44}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-size:24px;font-weight:900;letter-spacing:2px}
+    .brand span,.gold{color:#d6b36a}
+    nav{display:flex;gap:24px;flex-wrap:wrap}
+    nav a{font-size:14px;color:#ddd}
+    nav a:hover{color:#d6b36a}
+    .hero{min-height:590px;display:grid;place-items:center;text-align:center;padding:90px 0;background:radial-gradient(ellipse at center,#5b452222,transparent 60%),linear-gradient(135deg,#171717,#080808)}
+    .eyebrow{color:#d6b36a;letter-spacing:4px;text-transform:uppercase;font-size:12px;font-weight:bold}
+    h1{font-size:clamp(42px,8vw,82px);line-height:1.05;margin:22px 0}
+    h1 span{color:#d6b36a}
+    .hero p{max-width:650px;margin:0 auto;color:#c5c5c5;font-size:18px}
+    .buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:32px}
+    .btn{display:inline-block;padding:13px 23px;border:1px solid #d6b36a;border-radius:4px;font-weight:bold;transition:.2s}
+    .btn.primary{background:#d6b36a;color:#111}
+    .btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
+    section{padding:85px 0}
+    .section-head{text-align:center;margin-bottom:42px}
+    .section-head h2{font-size:clamp(30px,5vw,44px);margin:10px 0}
+    .section-head p{color:#aaa}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service{padding:30px;background:#191919;border:1px solid #ffffff12;border-radius:8px}
+    .service .icon{font-size:32px}
+    .service h3{margin:14px 0 8px;font-size:21px}
+    .service p{color:#aaa;font-size:14px}
+    .price{color:#d6b36a;font-size:22px;font-weight:bold;margin-top:18px}
+    .about{background:#171717}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .about h2{font-size:38px;margin:12px 0 18px}
+    .about p{color:#bbb;margin-bottom:14px}
+    .feature{padding:28px;border:1px solid #d6b36a55;background:#101010;border-radius:8px}
+    .feature div{padding:12px 0;border-bottom:1px solid #ffffff15}
+    .feature div:last-child{border:0}
+    .contact{text-align:center}
+    .contact p{color:#bbb;max-width:600px;margin:12px auto 0}
+    footer{padding:28px 0;border-top:1px solid #ffffff18;text-align:center;color:#888;font-size:13px}
+    @media(max-width:750px){
+      .nav{padding:15px 0;flex-direction:column}
+      nav{justify-content:center;gap:14px}
+      .services{grid-template-columns:1fr}
+      .about-grid{grid-template-columns:1fr}
+      section{padding:65px 0}
     }
-
-    .hero{
-        min-height:75vh;
-    }
-
-    .hero h1{
-        letter-spacing:-1px;
-    }
-
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    .about-grid{
-        grid-template-columns:1fr;
-        gap:35px;
-    }
-
-    .section-heading h2{
-        font-size:32px;
-    }
-
-    .about h2{
-        font-size:35px;
-    }
-}
-</style>
+  </style>
 </head>
-
 <body>
-
 <header>
-
-    <div class="navbar">
-
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="Dijital Köprü">
-            <span>DİJİTAL KÖPRÜ</span>
-        </a>
-
-        <nav>
-            <a href="index.html">Ana Sayfa</a>
-            <a href="#hizmetler">Hizmetler</a>
-            <a href="#hakkimizda">Hakkımızda</a>
-            <a href="#iletisim">İletişim</a>
-        </nav>
-
-    </div>
-
+  <div class="container nav">
+    <a class="brand" href="#anasayfa">BLACK <span>CROWN</span></a>
+    <nav>
+      <a href="#anasayfa">Ana Sayfa</a>
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </div>
 </header>
 
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <div class="badge">
-            <span></span>
-            BERBER WEB SİTESİ DEMOSU
-        </div>
-
-        <h1>
-            Tarzınızı<br>
-            <span>Yeniden Keşfedin.</span>
-        </h1>
-
-        <p>
-            Modern saç kesimleri, profesyonel bakım ve
-            kişisel stiliniz için özel berber deneyimi.
-        </p>
-
-        <div class="buttons">
-
-            <a href="#iletisim" class="btn btn-primary">
-                Randevu Al
-            </a>
-
-            <a href="#hizmetler" class="btn btn-secondary">
-                Hizmetleri Gör
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="hizmetler">
-
+<main>
+  <section class="hero" id="anasayfa">
     <div class="container">
-
-        <div class="section-heading">
-
-            <small>HİZMETLER</small>
-
-            <h2>Profesyonel Bakım</h2>
-
-        </div>
-
-
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="card-icon">✂️</div>
-
-                <h3>Saç Kesimi</h3>
-
-                <p>
-                    Tarzınıza ve yüz tipinize uygun
-                    modern saç kesimleri.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">🧔</div>
-
-                <h3>Sakal Tasarımı</h3>
-
-                <p>
-                    Yüzünüze uygun profesyonel
-                    sakal şekillendirme.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">💈</div>
-
-                <h3>Saç & Sakal</h3>
-
-                <p>
-                    Saç ve sakal bakımını tek seansta
-                    profesyonel şekilde tamamlayın.
-                </p>
-
-            </div>
-
-        </div>
-
+      <div class="eyebrow">Premium erkek bakım deneyimi</div>
+      <h1>Tarzın senin<br><span>imzan.</span></h1>
+      <p>Modern kesimler, kusursuz sakal tasarımı ve detaylara önem veren profesyonel bakım deneyimi.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#hizmetler">Hizmetleri keşfet</a>
+        <a class="btn" href="#iletisim">İletişime geç</a>
+      </div>
     </div>
+  </section>
 
-</section>
-
-
-<section id="hakkimizda" class="about">
-
+  <section id="hizmetler">
     <div class="container">
-
-        <div class="about-grid">
-
-            <div>
-
-                <div class="section-heading" style="text-align:left;margin-bottom:25px;">
-
-                    <small>BERBER DENEYİMİ</small>
-
-                    <h2>Tarzınız,<br>imzanızdır.</h2>
-
-                </div>
-
-                <p>
-                    Kaliteli hizmet, modern yaklaşım ve
-                    müşteri memnuniyeti odaklı profesyonel
-                    berber deneyimi.
-                </p>
-
-                <p>
-                    Her müşterinin tarzına özel çözümler
-                    sunarak kendinizi iyi hissetmenizi
-                    hedefliyoruz.
-                </p>
-
-            </div>
-
-
-            <div class="info">
-
-                <h3>Neden Biz?</h3>
-
-                <div class="info-item">✓ Profesyonel hizmet</div>
-
-                <div class="info-item">✓ Modern saç modelleri</div>
-
-                <div class="info-item">✓ Kişiye özel stil</div>
-
-                <div class="info-item">✓ Hijyenik çalışma ortamı</div>
-
-                <div class="info-item">✓ Müşteri memnuniyeti</div>
-
-            </div>
-
-        </div>
-
+      <div class="section-head">
+        <div class="eyebrow">Hizmetlerimiz</div>
+        <h2>Bakımda <span class="gold">ustalık</span></h2>
+        <p>İhtiyacına uygun profesyonel bakım seçenekleri.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <div class="icon">✂️</div>
+          <h3>Modern Saç Kesimi</h3>
+          <p>Kişisel tarzına uygun, özenli ve modern saç kesimi.</p>
+          <div class="price">₺350'den</div>
+        </article>
+        <article class="service">
+          <div class="icon">🪒</div>
+          <h3>Sakal Tasarımı</h3>
+          <p>Yüz hatlarına uygun sakal şekillendirme ve bakım.</p>
+          <div class="price">₺200'den</div>
+        </article>
+        <article class="service">
+          <div class="icon">♛</div>
+          <h3>Saç + Sakal</h3>
+          <p>Baştan sona tamamlanmış, bütünlüklü bir görünüm.</p>
+          <div class="price">₺500'den</div>
+        </article>
+      </div>
+      <p style="text-align:center;color:#777;font-size:12px;margin-top:20px">Fiyatlar demo amaçlıdır; gerçek işletmeye göre güncellenmelidir.</p>
     </div>
+  </section>
 
-</section>
+  <section class="about" id="hakkimizda">
+    <div class="container about-grid">
+      <div>
+        <div class="eyebrow">Black Crown farkı</div>
+        <h2>Detaylarda saklı <span class="gold">kalite.</span></h2>
+        <p>İyi bir saç kesimi yalnızca görünüş değil, kendini iyi hissetme meselesidir.</p>
+        <p>BLACK CROWN, modern berber kültürünü özenli hizmet ve güçlü bir tarzla birleştiren örnek bir işletme konseptidir.</p>
+      </div>
+      <div class="feature">
+        <div>✦ Kişiye özel stil önerileri</div>
+        <div>✦ Temiz ve özenli çalışma</div>
+        <div>✦ Modern kesim teknikleri</div>
+        <div>✦ Rahat ve profesyonel ortam</div>
+      </div>
+    </div>
+  </section>
 
-
-<section id="iletisim" class="contact">
-
+  <section class="contact" id="iletisim">
     <div class="container">
-
-        <div class="section-heading">
-
-            <small>RANDEVU</small>
-
-            <h2>Yeni Tarzınız İçin</h2>
-
-        </div>
-
-        <p>
-            Randevu almak veya hizmetler hakkında
-            bilgi almak için bizimle iletişime geçebilirsiniz.
-        </p>
-
-        <div class="buttons">
-
-            <a href="tel:+905000000000" class="btn btn-primary">
-                📞 Randevu Al
-            </a>
-
-            <a href="index.html" class="btn btn-secondary">
-                ← Dijital Köprü
-            </a>
-
-        </div>
-
-        <div class="demo-note">
-            Bu sayfa Dijital Köprü portföyünde yer alan örnek bir
-            berber web sitesi tasarımıdır.
-        </div>
-
+      <div class="eyebrow">Bize ulaş</div>
+      <h2>Yeni tarzına hazır mısın?</h2>
+      <p>Bu bir demo sitedir. Gerçek işletme adı, adresi, telefon numarası ve randevu bağlantısı müşteriye göre eklenebilir.</p>
+      <div class="buttons">
+        <a class="btn primary" href="mailto:info@dijitalkopru.com?subject=Berber%20Demo%20Sitesi">Demo hakkında bilgi al</a>
+        <a class="btn" href="../">Dijital Köprü</a>
+      </div>
     </div>
-
-</section>
-
+  </section>
+</main>
 
 <footer>
-
-    © 2026 <strong>Dijital Köprü</strong> — Berber Demo
-
+  <div class="container">BLACK CROWN · Demo web sitesi · Dijital Köprü © 2026</div>
 </footer>
-
 </body>
 </html>
