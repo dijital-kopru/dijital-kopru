@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d19">
+  <meta name="description" content="Dijital Köprü'den web tasarım, sosyal medya ve video içerik hizmetleri için teklif isteyin.">
+  <title>Teklif Al | Dijital Köprü</title>
+
+  <style>
+    :root {
+      --bg: #080d19;
+      --panel: #111c30;
+      --blue: #4d8dff;
+      --cyan: #48d7e8;
+      --text: #f4f7ff;
+      --muted: #a7b2c8;
+      --border: rgba(255,255,255,.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background:
+        radial-gradient(ellipse at 80% 0%, rgba(77,141,255,.13), transparent 38%),
+        var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1050px, 90%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(8,13,25,.94);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .back {
+      color: #a9c8ff;
+      font-size: 14px;
+    }
+
+    main {
+      padding: 65px 0 85px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 35px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 51px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 15px;
+    }
+
+    h1 span {
+      color: var(--blue);
+    }
+
+    .intro p {
+      color: var(--muted);
+    }
+
+    .form-card {
+      max-width: 760px;
+      margin: auto;
+      padding: 35px;
+      background: linear-gradient(145deg, #111c30, #0c1424);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 25px 70px rgba(0,0,0,.2);
+    }
+
+    .form-title {
+      font-size: 21px;
+      margin-bottom: 5px;
+    }
+
+    .form-description {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .optional {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: normal;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 13px 14px;
+      background: #0a1221;
+      color: var(--text);
+      font: inherit;
+      font-size: 14px;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--blue);
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #75839b;
+    }
+
+    select option {
+      background: #0a1221;
+    }
+
+    textarea {
+      min-height: 135px;
+      resize: vertical;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0 0 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--blue), #3973e8);
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform .2s, opacity .2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      opacity: .93;
+    }
+
+    .privacy {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact a {
+      color: #9bc0ff;
+    }
+
+    footer {
+      padding: 22px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        min-height: 70px;
+      }
+
+      .logo {
+        font-size: 19px;
+      }
+
+      main {
+        padding: 45px 0 60px;
+      }
+
+      .form-card {
+        padding: 23px 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .full {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <a class="logo" href="./index.html">Dijital <span>Köprü</span></a>
+      <a class="back" href="./index.html">← Ana Sayfaya Dön</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="intro">
+      <div class="tag">PROJENİZİ BİRLİKTE GELİŞTİRELİM</div>
+      <h1>Projeniz için <span>teklif alın.</span></h1>
+      <p>
+        İhtiyacınızı bize anlatın. Bilgilerinizi inceleyebilmemiz için
+        aşağıdaki formu doldurun.
+      </p>
+    </div>
+
+    <div class="form-card">
+      <h2 class="form-title">Proje bilgi formu</h2>
+      <p class="form-description">
+        Yıldız (*) bulunan alanların doldurulması zorunludur.
+      </p>
+
+      <form id="offerForm">
+        <div class="grid">
+
+          <div class="field">
+            <label for="name">Adınız ve soyadınız *</label>
+            <input id="name" name="name" type="text"
+              placeholder="Adınız Soyadınız" required maxlength="100">
+          </div>
+
+          <div class="field">
+            <label for="business">İşletme adı</label>
+            <input id="business" name="business" type="text"
+              placeholder="İşletmenizin adı" maxlength="120">
+          </div>
+
+          <div class="field">
+            <label for="email">E-posta adresiniz *</label>
+            <input id="email" name="email" type="email"
+              placeholder="ornek@mail.com" required maxlength="150">
+          </div>
+
+          <div class="field">
+            <label for="phone">Telefon <span class="optional">(İsteğe bağlı)</span></label>
+            <input id="phone" name="phone" type="tel"
+              placeholder="Telefon numaranız" maxlength="30">
+          </div>
+
+          <div class="field">
+            <label for="service">İstediğiniz hizmet *</label>
+            <select id="service" name="service" required>
+              <option value="">Hizmet seçin</option>
+              <option>Web Tasarım</option>
+              <option>Sosyal Medya Yönetimi</option>
+              <option>Video ve İçerik</option>
+              <option>Birden Fazla Hizmet</option>
+              <option>Diğer</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="budget">Bütçeniz</label>
+            <select id="budget" name="budget">
+              <option value="">Henüz belirlemedim</option>
+              <option>5.000 TL altı</option>
+              <option>5.000 – 10.000 TL</option>
+              <option>10.000 – 25.000 TL</option>
+              <option>25.000 TL üzeri</option>
+              <option>Görüşerek belirlemek istiyorum</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="details">Projenizi anlatın *</label>
+            <textarea id="details" name="details"
+              placeholder="Ne tür bir site veya hizmet istiyorsunuz? Beklentileriniz neler?"
+              required maxlength="3000"></textarea>
+          </div>
+
+          <div class="field full">
+            <label for="deadline">İstediğiniz teslim zamanı</label>
+            <select id="deadline" name="deadline">
+              <option value="">Henüz belirlemedim</option>
+              <option>En kısa sürede</option>
+              <option>1–2 hafta içinde</option>
+              <option>1 ay içinde</option>
+              <option>Acele değil</option>
+            </select>
+          </div>
+
+        </div>
+
+        <p class="note">
+          Formu gönderdiğinizde e-posta uygulamanız açılır. Gönderim,
+          e-posta uygulamanızdan ayrıca onay vermenizi gerektirir.
+        </p>
+
+        <button type="submit">Teklif Talebini E-postaya Aktar →</button>
+
+        <p class="privacy">
+          Bilgileriniz yalnızca oluşturduğunuz e-posta taslağına aktarılır.
+          Bu form kendi başına veri kaydetmez.
+        </p>
+      </form>
+    </div>
+
+    <div class="contact">
+      Başka bir sorunuz mu var?
+      <a href="mailto:info@dijitalkopru.com">Bize e-posta gönderin.</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Dijital Köprü · Web Sitesi • Sosyal Medya • Dijital Çözümler
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("offerForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const form = event.currentTarget;
+      if (!form.reportValidity()) return;
+
+      const data = new FormData(form);
+
+      const subject = "Dijital Köprü - Yeni Teklif Talebi";
+
+      const body = [
+        "YENİ TEKLİF TALEBİ",
+        "",
+        "Ad Soyad: " + (data.get("name") || ""),
+        "İşletme: " + (data.get("business") || "Belirtilmedi"),
+        "E-posta: " + (data.get("email") || ""),
+        "Telefon: " + (data.get("phone") || "Belirtilmedi"),
+        "Hizmet: " + (data.get("service") || ""),
+        "Bütçe: " + (data.get("budget") || "Belirtilmedi"),
+        "Teslim Zamanı: " + (data.get("deadline") || "Belirtilmedi"),
+        "",
+        "PROJE DETAYLARI:",
+        data.get("details") || ""
+      ].join("\n");
+
+      const mailto =
+        "mailto:info@dijitalkopru.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      window.location.href = mailto;
+    });
+  </script>
+
+</body>
+</html>
